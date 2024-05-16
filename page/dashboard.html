@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container-fluid mt-4 mb-4 ml-2">
+        <!-- Sidebar -->
+        <div class="row">
+            <!-- Sidebar Content -->
+            <div class="col-md-2 shadow-lg pt-3 pb-3 custom-border" style="display: flex; flex-direction: column; justify-content: space-between; background-color: #FFD919">
+                <!-- Sidebar Navigation -->
+                <ul class="nav nav-pills" style="display: block;">
+                    <li class="btn-pilihan active px-5 p-2 custom-border mb-2"><a href="/dashboard" class="text-white">Dashboard</a></li>
+                    <li class="btn-display active px-5 p-2 custom-border mb-2"><a href="/tabledata" class="text-dark">Table Data</a></li>
+                    <li class="btn-display active px-4 p-2 custom-border mb-2"><a href="/team" class="text-dark">Information Team</a></li>
+                </ul>
+                <!-- Logout Button -->
+                <button type="button" class="btn btn-login btn-block custom-border"><a href="/" class="text-dark">LogOut</a></button>
+            </div>
+            <!-- Main Content -->
+            <div class="container shadow-lg pt-4 pb-4 background custom-border">
+                <!-- Content Section -->
+                <div class="container">
+                    <div class="row">
+                        <!-- Sales Data -->
+                        <div class="col-md-2 shadow-sm m-4 pt-2 background-table custom-border d-flex justify-content-between">
+                            <div>
+                                <i class="fas fa-users fa-2x mt-2"></i>
+                            </div>
+                            <div>
+                                Total Customer
+                                <p id="totalCustomers">Memuat data...</p>
+                            </div>
+                        </div>
+                        <!-- Total Sales -->
+                        <div class="col-md-2 shadow-sm m-4 pt-2 background-table custom-border d-flex">
+                            <div class="pr-4 pl-2">
+                                <i class="fas fa-dollar-sign fa-2x mt-2"></i>
+                            </div>
+                            <div>
+                                Total Sales
+                                <p id="totalSales">Memuat data...</p>
+                            </div>
+                        </div>
+                        <!-- Total Quantity -->
+                        <div class="col-md-2 shadow-sm m-4 pt-2 background-table custom-border d-flex justify-content-between">
+                            <div>
+                                <i class="fas fa-shopping-cart fa-2x mt-2"></i>
+                            </div>
+                            <div>
+                                Total Quantity
+                                <p id="totalQuantity">Memuat data...</p>
+                            </div>
+                        </div>
+                        <!-- Total Profit -->
+                        <div class="col-md-2 shadow-sm m-4 pt-2 background-table custom-border d-flex">
+                            <div class="pr-4 pl-2">
+                                <i class="fas fa-chart-line fa-2x mt-2"></i>
+                            </div>
+                            <div>
+                                Total Profit
+                                <p id="totalProfit">Memuat data...</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Charts Section -->
+                <div>
+                    <div class="container d-flex justify-content-between">
+                        <!-- Chart 1 -->
+                        <div class="shadow-lg m-2 pt-4 pb-4 btn-display custom-border table-data">
+                            <h3 class="text-center">Total Sales Per Segment</h3>
+                            <canvas class="p-2" id="chart-sales-per-segment" width="400px" height="200px"></canvas>
+                        </div>
+                        <!-- Chart 2 -->
+                        <div class="shadow-lg m-2 pt-4 pb-4 btn-display custom-border table-data">
+                            <h3 class="text-center">Sales Pertahun</h3>
+                            <canvas class="p-2" id="chart-sales-per-year" width="400px" height="200px"></canvas>
+                        </div>
+                    </div>
+                    <div class="container d-flex justify-content-between">
+                        <!-- Chart 3 -->
+                        <div class="shadow-lg m-2 pt-4 pb-4 btn-display custom-border table-data">
+                            <h3 class="text-center">Sales Shipmode</h3>
+                            <canvas class="p-2" id="chart-sales-shipmode" width="400px" height="200px"></canvas>
+                        </div>
+                        <!-- Chart 4 -->
+                        <div class="shadow-lg m-2 pt-4 pb-4 btn-display custom-border table-data">
+                            <h3 class="text-center">Data Apa ya?</h3>
+                            <canvas class="p-2" id="chart-data-unknown" width="400px" height="200px"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
