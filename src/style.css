@@ -231,3 +231,89 @@ body {
 .container.active .toggle-right{
     transform: translateX(200%);
 }
+
+.btn-login{
+  background-color: #FFB400;
+}
+
+.custom-border {
+    border: 2px solid rgba(0, 0, 0, 0.5);
+}
+
+.btn-pilihan{
+  background-color: #C46A29;
+}
+.btn-display{
+  background-color: #FFEC8C;
+}
+
+.background{
+  background-color: #FFD919;
+}
+
+.background-table{
+  background-color: rgba(255, 236, 140, 0.5);
+  border-radius: 0.5rem;
+}
+
+.table-border{
+  border: 2px solid black;
+}
+
+.table-data{
+  border-radius: 2%;
+  width: 50%;
+}
+
+.profile-page {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 10px;
+  justify-items: center;
+  align-items: center;
+}
+
+.profile-image {
+  position: relative;
+  width: 200px;
+  height: 200px;
+}
+
+.profile-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.profile-caption {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  width: 100%;
+  padding: 10px;
+  background-color: #ede7e780;
+  color: black;
+  text-align: center;
+  font-size: 16px;
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+  border-left: 2px solid black;
+  border-right: 2px solid black;
+}
+
+.project-title {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.project-description {
+  text-align: center;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.profile-caption span:first-child {
+  font-weight: bold;
+}
