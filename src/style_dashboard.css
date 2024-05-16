@@ -1,3 +1,9 @@
+body {
+    background-image: url('/revou/src/img/backgrodund.png');
+    background-size: cover;
+
+}
+
 .btn-login{
   background-color: #FFB400;
 }
