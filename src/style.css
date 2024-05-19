@@ -10,9 +10,8 @@
 
 body {
   /* background-image: url('https://i.pinimg.com/originals/69/87/ec/6987ec0006652f559eb97b1c0388f75d.jpg'); */
-  background-image: url('/revou/src/img/backgrodund.png');
+  background-image: url('/background1.jpg');
   background-size: cover;
-  background-position: center;
   display: flex;
   align-items: center;
   justify-content: center;

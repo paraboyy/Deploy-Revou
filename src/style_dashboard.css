@@ -1,5 +1,5 @@
 body {
-    background-image: url('/revou/src/img/backgrodund.png');
+    background-image: url('/src/img/backgrodund.png');
     background-size: cover;
 
 }
@@ -50,6 +50,7 @@ body {
   position: relative;
   width: 200px;
   height: 200px;
+  border-radius: 5%;
 }
 
 .profile-image img {

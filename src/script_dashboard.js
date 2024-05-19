@@ -2,7 +2,7 @@ class Dashboard {
     constructor() {
         this.createCharts = this.createCharts.bind(this);
         this.data = {
-            totalCustomers: 1000,
+            totalCustomers: 1500,
             totalSales: 7500,
             totalQuantity: 1500,
             totalProfit: 3500
@@ -105,7 +105,7 @@ class Dashboard {
             new Chart(ctx, {
                 type: 'bar',
                 data: {
-                    labels: ['Mode A', 'Mode B', 'Mode C', 'Mode D', 'Mode E'],
+                    labels: ['Same Day', 'Mode B', 'Mode C', 'Mode D', 'Mode E'],
                     datasets: [{
                         label: 'Sales',
                         data: [300, 400, 500, 600, 700],

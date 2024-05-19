@@ -1,6 +1,7 @@
 // Data pengguna statis
 const users = [
     { name: "John", email: "admin@gmail.com", password: "admin123" },
+    { name: "John", email: "testing@gmail.com", password: "testing123" },
 ];
 
 // Mengambil referensi elemen-elemen yang dibutuhkan
@@ -23,10 +24,37 @@ document.addEventListener('DOMContentLoaded', function() {
     // Menambahkan event listener untuk tombol 'Daftar'
     document.getElementById('registerBtn').addEventListener('click', function(event) {
         event.preventDefault(); // Menghentikan perilaku default tombol
-        var name = document.querySelector('.sign-up input[type="text"]').value;
-        var email = document.querySelector('.sign-up input[type="email"]').value;
-        var password = document.querySelector('.sign-up input[type="password"]').value;
         
+        var name = document.querySelector('.sign-up input[type="text"]').value.trim();
+        var email = document.querySelector('.sign-up input[type="email"]').value.trim();
+        var password = document.querySelector('.sign-up input[type="password"]').value.trim();
+
+        // Validasi input
+        if (name === "" || email === "" || password === "") {
+            alert('Semua kolom harus diisi.');
+            return;
+        }
+
+        // Validasi panjang nama
+        if (name.length < 5) {
+            alert('Nama harus terdiri dari minimal 5 karakter.');
+            return;
+        }
+
+        // Validasi format email
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailPattern.test(email)) {
+            alert('Format email tidak valid.');
+            return;
+        }
+
+        // Validasi panjang password dan keharusan ada angka
+        const passwordPattern = /^(?=.*\d).{8,}$/;
+        if (!passwordPattern.test(password)) {
+            alert('Password harus terdiri dari minimal 8 karakter dan mengandung setidaknya satu angka.');
+            return;
+        }
+
         // Memeriksa apakah email sudah ada dalam data pengguna
         const userExists = users.some(user => user.email === email);
         if (userExists) {
@@ -41,9 +69,16 @@ document.addEventListener('DOMContentLoaded', function() {
     // Menambahkan event listener untuk tombol 'Masuk'
     document.getElementById('loginBtn').addEventListener('click', function(event) {
         event.preventDefault(); // Menghentikan perilaku default tombol
-        var email = document.querySelector('.sign-in input[type="email"]').value;
-        var password = document.querySelector('.sign-in input[type="password"]').value;
         
+        var email = document.querySelector('.sign-in input[type="email"]').value.trim();
+        var password = document.querySelector('.sign-in input[type="password"]').value.trim();
+
+        // Validasi input
+        if (email === "" || password === "") {
+            alert('Email dan password harus diisi.');
+            return;
+        }
+
         // Memeriksa kecocokan email dan password dengan data pengguna
         const user = users.find(user => user.email === email && user.password === password);
         if (user) {

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/src/style_table.css">
+    <link rel="stylesheet" href="/src/style_dashboard.css">
+</head>
+<body>
+    <div class="container-fluid mt-4 mb-4 ml-2">
+        <!-- Sidebar -->
+        <div class="row">
+            <!-- Sidebar Content -->
+            <div class="col-md-2 shadow-lg pt-3 pb-3 custom-border" style="display: flex; flex-direction: column; justify-content: space-between; background-color: #FFD919">
+                <!-- Sidebar Navigation -->
+                <ul class="nav nav-pills" style="display: block;">
+                    <li class="btn-display active px-5 p-2 custom-border mb-2"><a href="dashboard.html" class="text-dark">Dashboard</a></li>
+                    <li class="btn-pilihan active px-5 p-2 custom-border mb-2"><a href="table.html" class="text-white">Table Data</a></li>
+                    <li class="btn-display active px-4 p-2 custom-border mb-2"><a href="team.html" class="text-dark">Information Team</a></li>
+                </ul>
+                <!-- Logout Button -->
+                <button type="button" class="btn btn-login btn-block custom-border"><a href="../index.html" class="text-dark">LogOut</a></button>
+            </div>
+            <!-- Main Content -->
+            <div class="container shadow-lg pt-4 pb-4 background custom-border">
+                <!-- Content Section -->
+                <div class="container">
+                    <div class="row">
+                        <!-- Data Customer -->
+                        <div class="col-12 mb-4">
+                            <div class="table-data-customer">
+                                <h2>Data Customer</h2>
+                                <table class="table table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th>ID Customer</th>
+                                            <th>Nama Customer</th>
+                                            <th>Kota</th>
+                                            <th>Jenis Segment</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Balikpapan-001</td>
+                                            <td>Roy</td>
+                                            <td>Nama kota</td>
+                                            <td>Corporate</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Balikpapan-002</td>
+                                            <td>Admin</td>
+                                            <td>Nama kota</td>
+                                            <td>Corporate</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <div class="d-flex justify-content-between">
+                                    <button class="btn btn-primary">Previous Page</button>
+                                    <button class="btn btn-primary">Next Page</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Data Transaksi -->
+                        <div class="col-12 mb-4">
+                            <div class="table-data-customer">
+                                <h2>Data Transaksi</h2>
+                                <table class="table table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th>ID Customer</th>
+                                            <th>Nama Customer</th>
+                                            <th>Kota</th>
+                                            <th>Jenis Segment</th>
+                                            <th>apa ini</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Balikpapan-001</td>
+                                            <td>Roy</td>
+                                            <td>Nama kota</td>
+                                            <td>Corporate</td>
+                                            <td>Corporate</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Balikpapan-001</td>
+                                            <td>Roy</td>
+                                            <td>Nama kota</td>
+                                            <td>Corporate</td>
+                                            <td>Corporate</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <div class="d-flex justify-content-between">
+                                    <button class="btn btn-primary">Previous Page</button>
+                                    <button class="btn btn-primary">Next Page</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="/src/script_table.js"></script>
+</body>
+</html>
