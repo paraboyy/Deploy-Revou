@@ -1,13 +1,8 @@
 class Dashboard {
     constructor() {
         this.createCharts = this.createCharts.bind(this);
-        this.data = {
-            totalCustomers: 1500,
-            totalSales: 7500,
-            totalQuantity: 1500,
-            totalProfit: 3500
-        };
-        this.dataSalesYear = {};
+        // this.data = {} ;
+        this.dataSalesYear = {} ;
     }
 
     mounted = () => {
@@ -21,6 +16,8 @@ class Dashboard {
         try {
             const response = await fetch('../src/json/SalesYear.json');
             this.dataSalesYear = await response.json();
+            const response2 = await fetch('../src/json/TotalData.json');
+            this.data = await response2.json();
         } catch (error) {
             console.error('Error fetching data:', error);
         }
