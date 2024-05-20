@@ -7,11 +7,23 @@ class Dashboard {
             totalQuantity: 1500,
             totalProfit: 3500
         };
+        this.dataSalesYear = {};
     }
 
     mounted = () => {
-        this.updateData();
-        this.createCharts();
+        this.fetchData().then(() => {
+            this.updateData();
+            this.createCharts();
+        })
+    }
+
+    async fetchData() {
+        try {
+            const response = await fetch('../src/json/SalesYear.json');
+            this.dataSalesYear = await response.json();
+        } catch (error) {
+            console.error('Error fetching data:', error);
+        }
     }
 
     updateData() {
@@ -68,21 +80,15 @@ class Dashboard {
     // Create chart for total sales per year
         createSalesChartPerYear() {
             const ctx = document.getElementById('chart-sales-per-year').getContext('2d');
+            const labels = this.dataSalesYear.total_sales_per_year.map(item => item.year);
+            const salesData = this.dataSalesYear.total_sales_per_year.map(item => item.total_sales);
             new Chart(ctx, {
                 type: 'line',
                 data: {
-                    labels: ['01-2019', '02-2019', '03-2019', '04-2019', '05-2019', '06-2019',
-                             '07-2019', '08-2019', '09-2019', '10-2019', '11-2019', '12-2019',
-                             '01-2020', '02-2020', '03-2020', '04-2020', '05-2020', '06-2020',
-                             '07-2020', '08-2020', '09-2020', '10-2020', '11-2020', '12-2020',
-                ],
+                    labels: labels,
                     datasets: [{
                         label: 'Sales',
-                        data: [1800, 1500, 2000, 1800, 2100, 1800,
-                               1800, 1000, 2800, 1100, 2000, 1800,
-                               1500, 1300, 2000, 1800, 2400, 2100,
-                               2000, 1700, 2000, 1800, 2200, 2100
-                        ],
+                        data: salesData,
                         backgroundColor: 'rgba(67, 67, 67, 0.5)',
                         borderColor: 'rgba(67, 67, 67, 1)',
                         borderWidth: 1
