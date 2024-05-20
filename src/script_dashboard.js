@@ -1,3 +1,120 @@
+document.addEventListener('DOMContentLoaded', async () => {
+    const apiUrl = '../src/json/MainData.json';
+
+    async function fetchDataTable() {
+        try {
+            const response = await fetch(apiUrl);
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+            return await response.json();
+        } catch (error) {
+            console.error('Error fetching data:', error);
+            return [];
+        }
+    }
+
+    function populateTable(data, pageNumber, pageSize) {
+        const tableBody = document.querySelector('#data-table tbody');
+        tableBody.innerHTML = ''; // Clear previous data
+        const startIndex = (pageNumber - 1) * pageSize;
+        const endIndex = startIndex + pageSize;
+        const pageData = data.slice(startIndex, endIndex);
+        data.forEach(item => {
+            const row = document.createElement('tr');
+
+            row.innerHTML = `
+                <td>${item.Row_ID}</td>
+                <td>${item.Order_ID}</td>
+                <td>${item.Order_Date}</td>
+                <td>${item.Ship_Date}</td>
+                <td>${item.Ship_Mode}</td>
+                <td>${item.Customer_ID}</td>
+                <td>${item.Customer_Name}</td>
+                <td>${item.Segment}</td>
+                <td>${item.Country}</td>
+                <td>${item.City}</td>
+                <td>${item.State}</td>
+                <td>${item.Postal_Code}</td>
+                <td>${item.Region}</td>
+                <td>${item.Product_ID}</td>
+                <td>${item.Category}</td>
+                <td>${item.Sub_Category}</td>
+                <td>${item.Product_Name}</td>
+                <td>${item.Quantity}</td>
+                <td>${item.Sales}</td>
+                <td>${item.Discount}</td>
+                <td>${item.Profit}</td>
+            `;
+
+            tableBody.appendChild(row);
+        });
+    }
+
+    document.addEventListener('DOMContentLoaded', async () => {
+        const mainDataUrl = '../src/json/MainData.json';
+        const pageSize = 10;
+        let currentPage = 1;
+        let data = [];
+
+        async function fetchData() {
+            data = await fetchDataTable(mainDataUrl);
+            if (data) {
+                populateTable(data, currentPage, pageSize);
+                renderPagination();
+            }
+        }
+
+        function renderPagination() {
+            const totalPages = Math.ceil(data.length / pageSize);
+            const paginationContainer = document.querySelector('#pagination');
+            paginationContainer.innerHTML = '';
+
+            const prevButton = document.createElement('button');
+            prevButton.textContent = 'Previous';
+            prevButton.disabled = currentPage === 1;
+            prevButton.addEventListener('click', () => {
+                if (currentPage > 1) {
+                    currentPage--;
+                    populateTable(data, currentPage, pageSize);
+                    renderPagination();
+                }
+            });
+            paginationContainer.appendChild(prevButton);
+
+            for (let i = 1; i <= totalPages; i++) {
+                const pageButton = document.createElement('button');
+                pageButton.textContent = i;
+                pageButton.disabled = i === currentPage;
+                pageButton.addEventListener('click', () => {
+                    currentPage = i;
+                    populateTable(data, currentPage, pageSize);
+                    renderPagination();
+                });
+                paginationContainer.appendChild(pageButton);
+            }
+
+            const nextButton = document.createElement('button');
+            nextButton.textContent = 'Next';
+            nextButton.disabled = currentPage === totalPages;
+            nextButton.addEventListener('click', () => {
+                if (currentPage < totalPages) {
+                    currentPage++;
+                    populateTable(data, currentPage, pageSize);
+                    renderPagination();
+                }
+            });
+            paginationContainer.appendChild(nextButton);
+        }
+
+        await fetchData();
+    });
+
+    const data = await fetchDataTable();
+    populateTable(data);
+});
+
+
 class Dashboard {
     constructor() {
         this.createCharts = this.createCharts.bind(this);
@@ -26,6 +143,15 @@ class Dashboard {
             this.dataSegment = await responseSegment.json();
         } catch (error) {
             console.error('Error fetching data:', error);
+        }
+    }
+
+    async fetchDataTable() {
+        try {
+            const response = await fetch('../src/json/MainData.json');
+            this.dataTable = await response.json();
+        } catch (error) {
+            console.error('Error fetching data:', error)
         }
     }
 
