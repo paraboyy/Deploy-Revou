@@ -1,8 +1,10 @@
 class Dashboard {
     constructor() {
         this.createCharts = this.createCharts.bind(this);
-        // this.data = {} ;
+        this.data = {} ;
         this.dataSalesYear = {} ;
+        this.dataSihpmode = {} ;
+        this.dataSegment = {} ;
     }
 
     mounted = () => {
@@ -18,6 +20,10 @@ class Dashboard {
             this.dataSalesYear = await response.json();
             const response2 = await fetch('../src/json/TotalData.json');
             this.data = await response2.json();
+            const responseshipmode = await fetch('../src/json/ShipmodeData.json');
+            this.dataSihpmode = await responseshipmode.json();
+            const responseSegment = await fetch('../src/json/SegmentData.json');
+            this.dataSegment = await responseSegment.json();
         } catch (error) {
             console.error('Error fetching data:', error);
         }
@@ -39,13 +45,15 @@ class Dashboard {
     // Create chart for total sales per segment
         createSalesChartPerSegment() {
             const ctx = document.getElementById('chart-sales-per-segment').getContext('2d');
+            const labels = this.dataSegment.map(item => item.Segment);
+            const salesData = this.dataSegment.map(item => item.total_sales);
             new Chart(ctx, {
                 type: 'bar',
                 data: {
-                    labels: ['Segment A', 'Segment B', 'Segment C', 'Segment D', 'Segment E'],
+                    labels: labels,
                     datasets: [{
                         label: 'Sales',
-                        data: [200, 300, 400, 500, 600],
+                        data: salesData,
                         backgroundColor: [
                             'rgba(255, 99, 132, 0.5)',
                             'rgba(54, 162, 235, 0.5)',
@@ -105,13 +113,15 @@ class Dashboard {
         // Create chart for total sales by shipmode
         createSalesChartByShipmode(){
             const ctx = document.getElementById('chart-sales-shipmode').getContext('2d');
+            const labels = this.dataSihpmode.map(item => item.Ship_Mode);
+            const salesData = this.dataSihpmode.map(item => item.total_sales);
             new Chart(ctx, {
                 type: 'bar',
                 data: {
-                    labels: ['Same Day', 'Mode B', 'Mode C', 'Mode D', 'Mode E'],
+                    labels: labels,
                     datasets: [{
                         label: 'Sales',
-                        data: [300, 400, 500, 600, 700],
+                        data: salesData,
                         backgroundColor: [
                             'rgba(255, 99, 132, 0.5)',
                             'rgba(54, 162, 235, 0.5)',
