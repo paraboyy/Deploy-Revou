@@ -63,8 +63,8 @@ function renderData(data) {
       <div class="col-md-2  shadow-lg pt-3 pb-3 custom-border ml-2 mt-4" style="display: flex; flex-direction: column; justify-content: space-between; background-color: #FFD919">
         <ul class="nav nav-pills" style="display: block;">
           <li class="btn-display active p-2 custom-border mb-2" data-link="dashboard"><a href="../page/dashboard.html" class="text-dark">Dashboard</a></li>
-          <li class="btn-display active p-2 custom-border mb-2" data-link="team"><a href="../page/team.html" class="text-dark">Information Team</a></li>
           <li class="btn-pilihan active p-2 custom-border mb-2" data-link="tabledata"><a href="../page/table.html" class="text-white">Table Data</a></li>
+          <li class="btn-display active p-2 custom-border mb-2" data-link="team"><a href="../page/team.html" class="text-dark">Information Team</a></li>
         </ul>
         <button type="button" class="btn btn-login btn-block custom-border">
           <router-link to="/" class="text-dark">LogOut</router-link>
