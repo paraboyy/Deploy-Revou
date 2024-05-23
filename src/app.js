@@ -69,7 +69,7 @@ function renderData(data) {
             <li class="btn-display active p-2 custom-border mb-2" data-link="team"><a href="../page/team.html" class="text-dark">Information Team</a></li>
           </ul>
           <button type="button" class="btn btn-login btn-block custom-border">
-            <router-link to="/" class="text-dark">LogOut</router-link>
+            <a href="../index.html" class="text-dark">LogOut</a>
           </button>
         </div>
         <div class="mt-4 container shadow-lg pt-4 pb-4 background custom-border">
