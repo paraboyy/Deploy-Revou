@@ -75,8 +75,9 @@ function renderData(data) {
         <div class="mt-4 container shadow-lg pt-4 pb-4 background custom-border">
           <div class="container shadow-lg pt-4 pb-4 mb-4 background-table custom-border">
             <div class="col-md">
-              <div class="search-bar">
-                <input type="text" class="form-control w-50 mb-4" id="search-input" placeholder="Search..." oninput="searchData(event)">
+              <div class="search-bar row mb-4">
+                <input type="text" class="form-control w-50" id="search-input" placeholder="Search...">
+                <button class="btn btn-warning ml-2 text-dark" id="search-button">Search</button>
               </div>
               <div class="table-bordered">
                 <div class="card-header">
@@ -131,6 +132,7 @@ function renderData(data) {
     </div>
   `;
   appDiv.innerHTML = tableHTML;
+  document.getElementById('search-button').addEventListener('click', searchButtonClick);
 }
 
 // Function to handle sorting
@@ -174,8 +176,8 @@ function nextPage() {
 }
 
 // Function for search
-function searchData(event) {
-  const query = event.target.value.toLowerCase();
+function searchButtonClick() {
+  const query = document.getElementById('search-input').value.toLowerCase();
   filteredData = sampleData.filter(item => 
     item.Order_ID.toLowerCase().includes(query) ||
     item.Order_Date.toLowerCase().includes(query) ||

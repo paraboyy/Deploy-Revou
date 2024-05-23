@@ -25,9 +25,9 @@ document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('registerBtn').addEventListener('click', function(event) {
         event.preventDefault(); // Menghentikan perilaku default tombol
         
-        var name = document.querySelector('.sign-up input[type="text"]').value.trim();
-        var email = document.querySelector('.sign-up input[type="email"]').value.trim();
-        var password = document.querySelector('.sign-up input[type="password"]').value.trim();
+        var name = document.querySelector('.sign-up input[name="name"]').value.trim();
+        var email = document.querySelector('.sign-up input[name="email"]').value.trim();
+        var password = document.querySelector('.sign-up input[name="password"]').value.trim();
 
         // Validasi input
         if (name === "" || email === "" || password === "") {
@@ -70,8 +70,8 @@ document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('loginBtn').addEventListener('click', function(event) {
         event.preventDefault(); // Menghentikan perilaku default tombol
         
-        var email = document.querySelector('.sign-in input[type="email"]').value.trim();
-        var password = document.querySelector('.sign-in input[type="password"]').value.trim();
+        var email = document.querySelector('.sign-in input[name="email"]').value.trim();
+        var password = document.querySelector('.sign-in input[name="password"]').value.trim();
 
         // Validasi input
         if (email === "" || password === "") {
