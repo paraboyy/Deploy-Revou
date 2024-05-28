@@ -100,3 +100,11 @@ body {
 .profile-caption span:first-child {
   font-weight: bold;
 }
+
+.btn-display:hover {
+  background-color: #d2af00;
+}
+
+.background-table:hover {
+  background-color: #d2af00;
+}
