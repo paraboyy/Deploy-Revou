@@ -1,20 +1,26 @@
-// Mengambil referensi elemen-elemen yang dibutuhkan
-const container = document.getElementById('container');
-const registerBtn = document.getElementById('register');
-const loginBtn = document.getElementById('login');
-
-// Menambahkan event listener untuk tombol 'Daftar'
-registerBtn.addEventListener('click', () => {
-    container.classList.add("active"); // Menambahkan kelas 'active' ke container
-});
-
-// Menambahkan event listener untuk tombol 'Masuk'
-loginBtn.addEventListener('click', () => {
-    container.classList.remove("active"); // Menghapus kelas 'active' dari container
-});
-
-// Menambahkan event listener ketika dokumen telah dimuat sepenuhnya
 document.addEventListener('DOMContentLoaded', function() {
+    const container = document.getElementById('container');
+    const showRegisterForm = document.getElementById('showRegisterForm');
+    const showLoginForm = document.getElementById('showLoginForm');
+    const registerBtn = document.getElementById('registerBtn');
+    const loginBtn = document.getElementById('loginBtn');
+    const signInForm = document.querySelector('.sign-in-form');
+    const signUpForm = document.querySelector('.sign-up-form');
+
+    // Menambahkan event listener untuk link 'Buat Akun'
+    showRegisterForm.addEventListener('click', (event) => {
+        event.preventDefault();
+        signInForm.classList.remove('active');
+        signUpForm.classList.add('active');
+    });
+
+    // Menambahkan event listener untuk link 'Masuk'
+    showLoginForm.addEventListener('click', (event) => {
+        event.preventDefault();
+        signUpForm.classList.remove('active');
+        signInForm.classList.add('active');
+    });
+
     // Fungsi untuk mendapatkan pengguna dari Local Storage
     function getUsers() {
         const users = localStorage.getItem('users');
@@ -29,12 +35,12 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // Menambahkan event listener untuk tombol 'Daftar'
-    document.getElementById('registerBtn').addEventListener('click', function(event) {
+    registerBtn.addEventListener('click', function(event) {
         event.preventDefault(); // Menghentikan perilaku default tombol
         
-        const name = document.querySelector('.sign-up input[name="name"]').value.trim();
-        const email = document.querySelector('.sign-up input[name="email"]').value.trim();
-        const password = document.querySelector('.sign-up input[name="password"]').value.trim();
+        const name = document.querySelector('.sign-up-form input[name="name"]').value.trim();
+        const email = document.querySelector('.sign-up-form input[name="email"]').value.trim();
+        const password = document.querySelector('.sign-up-form input[name="password"]').value.trim();
 
         // Validasi input
         if (name === "" || email === "" || password === "") {
@@ -75,11 +81,11 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // Menambahkan event listener untuk tombol 'Masuk'
-    document.getElementById('loginBtn').addEventListener('click', function(event) {
+    loginBtn.addEventListener('click', function(event) {
         event.preventDefault(); // Menghentikan perilaku default tombol
         
-        const email = document.querySelector('.sign-in input[name="email"]').value.trim();
-        const password = document.querySelector('.sign-in input[name="password"]').value.trim();
+        const email = document.querySelector('.sign-in-form input[name="email"]').value.trim();
+        const password = document.querySelector('.sign-in-form input[name="password"]').value.trim();
 
         // Validasi input
         if (email === "" || password === "") {
