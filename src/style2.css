@@ -5,11 +5,11 @@
 }
 
 .glass-effect {
-    background: rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.319);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px); /* Untuk dukungan Safari */
     border-radius: 10px;
-    border: 2px solid rgba(0, 0, 0, 1);
+    border: 2px solid rgb(145, 145, 145);
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -22,6 +22,10 @@
     width: 40%;
 }
 
+.icon-color {
+    color: #000000;
+}
+
 .mt-10 {
     margin-top: 25%;
 }
@@ -29,11 +33,31 @@
 .bg-card {
     background-color: rgb(243, 184, 9);
     border-radius: 15% 0% 15% 0%;
+    height: 340px;
+    font-size: 15%;
+}
+
+/* .bg-card p {
+    font-size: 5vw; 
+    white-space: nowrap;
+} */
+
+.bg-card2 {
+    background-color: rgb(243, 184, 9);
+    border-radius: 15% 0% 15% 0%;
+    height: 340px;
 }
 
 .bg-card-outline {
     border: 3px solid rgb(243, 184, 9);
     border-radius: 0% 15% 0% 15%;
+    height: 340px;
+}
+
+.bg-card-outline2 {
+    border: 3px solid rgb(243, 184, 9);
+    border-radius: 0% 15% 0% 15%;
+    height: 340px;
 }
 
 .bg-kuning {
@@ -54,7 +78,7 @@
     position: relative;
     display: flex;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: center;
     width: 100%;
 
 }
@@ -90,11 +114,12 @@
 .superstore {
     padding-inline: 2rem;
     box-sizing: border-box;
-    width: 50%;
+    width: 40%;
     display: flex;
     align-items: center;
     flex-wrap: wrap;
     z-index: 1;
+    justify-content: center;
     position: relative;
 }
 
@@ -170,7 +195,7 @@
 }
 
 .logo {
-    width: 5rem;
+    width: 4rem;
 }
 
 .product-img {

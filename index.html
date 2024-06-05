@@ -6,12 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="src/style2.css">
-    <title>SUPERSTORE WEBSITE</title>
+    <title>South Strore</title>
 </head>
 
 <body>
-    <nav class="navbar bg-warning fixed-top">
+    <!-- <nav class="navbar bg-warning fixed-top">
         <div class="container-fluid">
             <div class="col-4">
                 <img src="/src/img/logosuperstore.png" alt="logo" class="logo"/>
@@ -40,14 +41,43 @@
                 </div>
             </div>
         </div>
-    </nav>
+    </nav> -->
 
-    <main class="main-top">
+    <div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-auto bg-warning sticky-top">
+            <div class="d-flex flex-sm-column flex-row flex-nowrap bg-warning align-items-center sticky-top">
+                <!-- <a href="/" class="d-block p-3 link-dark text-decoration-none" title="" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Icon-only">
+                    <i class="bi-bootstrap fs-1"></i>
+                </a> -->
+                <img src="/src/img/logoPutih.png" alt="logo" class="logo mt-4"/>
+                <ul class="nav nav-pills nav-flush flex-sm-column flex-row flex-nowrap mb-auto text-center align-items-center">
+                    <li class="nav-item">
+                        <a href="#home" class="nav-link py-3 px-2" title="" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Home">
+                            <i class="bi bi-house-fill icon-color fs-2"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#product" class="nav-link py-3 px-2" title="" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Produk">
+                            <i class="bi bi-box-seam-fill icon-color fs-2"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#team" class="nav-link py-3 px-2" title="" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Team Projects">
+                            <i class="bi bi-people-fill icon-color fs-2"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-sm min-vh-100">
+
+    <main>
         <!-- SECTION HOME -->
         <section id="home">
             <div class="mask-group">
                 <div class="background">
-                    <img src="/src/img/bg1.png" alt="background">
+                    <img src="/src/img/bg1.png" alt="background" class="shadow mt-2" style="border-radius: 10px;">
                 </div>
                 <div class="superstore">
                     <div class="overlay glass-effect rounded-2 shadow-lg">
@@ -57,12 +87,6 @@
                                     <h2>Login</h2>
                                     <p class="text">Untuk melihat dashboard</p>
                                     <form>
-                                        <div class="social-icons">
-                                            <a href="#" class="icon"><i class="fa-brands fa-google-plus-g"></i></a>
-                                            <a href="#" class="icon"><i class="fa-brands fa-facebook-f"></i></a>
-                                            <a href="#" class="icon"><i class="fa-brands fa-github"></i></a>
-                                            <a href="#" class="icon"><i class="fa-brands fa-linkedin-in"></i></a>
-                                        </div>
                                         <input type="email" name="email" placeholder="Email" required>
                                         <input type="password" name="password" placeholder="Password" required>
                                         <button id="loginBtn">Masuk</button> <br>
@@ -91,22 +115,22 @@
 
             <div class="row justify-content-center">
                 <div class="width-card mx-5">
-                    <h3 class="fw-bold text-end">Background Project</h3>
+                    <h3 class="fw-bold text-center">Background Project</h3>
                     <div class="container bg-card p-5 shadow">
                         <p class="fs-3">Penjualan (sales) di wilayah South merupakan penjualan dengan total sales terkecil selama 2014 - 2017.</p>
                     </div>
-                    <h3 class="fw-bold mt-4 text-end">Problem Statment</h3>
-                    <div class="container bg-card mb-4 p-5 shadow">
+                    <h3 class="fw-bold mt-4 text-center">Problem Statment</h3>
+                    <div class="container bg-card-outline2 mb-4 p-5 shadow">
                         <p class="fs-3">Bagaimana strategi yang dapat diterapkan guna meningkatkan penjualan di wilayah Selatan sebesar 20% dalam rentang waktu satu tahun?</p>
                     </div>
                 </div>
                 <div class="width-card mx-5">
-                    <h3 class="fw-bold text-end">Project Goals</h3>
+                    <h3 class="fw-bold text-center">Project Goals</h3>
                     <div class="container bg-card-outline p-5 shadow">
                         <p class="fs-3">Meningkatkan penjualan di wilayah selatan sebesar 20% dalam jangka waktu 1 tahun</p>
                     </div>
-                    <h3 class="fw-bold mt-4 text-end">Recomendation</h3>
-                    <div class="container bg-card-outline mb-4 p-5 shadow">
+                    <h3 class="fw-bold mt-4 text-center">Recomendation</h3>
+                    <div class="container bg-card2 mb-4 p-5 shadow">
                         <p class="fs-5">Menaikkan harga barang pada segment home office dan category furniture.</p>
                         <p class="fs-5">Mengoptimalkan pemasaran pada kota - kota dengan sales rendah.</p>
                         <p class="fs-5">Menghapus opsi pengiriman same day untuk mengurangi biaya dan mengoptimalkan sumber daya pengiriman.</p>
@@ -212,16 +236,16 @@
                 </div>
                 <div class="d-flex p-4 w-75">
                     <div class="product-container">
-                        <img src="/src/img/phone.png" alt="Phone" class="img-fluid product-img">
-                        <p class="text-center fs-4">Phone</p>
+                        <img src="/src/img/binder.png" alt="Phone" class="img-fluid product-img">
+                        <p class="text-center fs-4">Binders</p>
                     </div>
                     <div class="product-container">
-                        <img src="/src/img/machine.png" alt="Machines" class="img-fluid product-img">
-                        <p class="text-center fs-4">Machines</p>
+                        <img src="/src/img/paper.png" alt="Machines" class="img-fluid product-img">
+                        <p class="text-center fs-4">Paper</p>
                     </div>
                     <div class="product-container">
-                        <img src="/src/img/coppiers.png" alt="Copiers" class="img-fluid product-img">
-                        <p class="text-center fs-4">Copiers</p>
+                        <img src="/src/img/storage.png" alt="Copiers" class="img-fluid product-img">
+                        <p class="text-center fs-4">Storage</p>
                     </div>
                 </div>
             </div>
@@ -229,16 +253,16 @@
             <div class="row bg-kuning3 mb-4">
                 <div class="d-flex p-4 w-75">
                     <div class="product-container">
-                        <img src="/src/img/phone.png" alt="Phone" class="img-fluid product-img">
-                        <p class="text-center fs-4">Phone</p>
+                        <img src="/src/img/meja.png" alt="Phone" class="img-fluid product-img">
+                        <p class="text-center fs-4">Tables</p>
                     </div>
                     <div class="product-container">
-                        <img src="/src/img/machine.png" alt="Machines" class="img-fluid product-img">
-                        <p class="text-center fs-4">Machines</p>
+                        <img src="/src/img/kursi.png" alt="Machines" class="img-fluid product-img">
+                        <p class="text-center fs-4">Chairs</p>
                     </div>
                     <div class="product-container">
-                        <img src="/src/img/coppiers.png" alt="Copiers" class="img-fluid product-img">
-                        <p class="text-center fs-4">Copiers</p>
+                        <img src="/src/img/lemari.png" alt="Copiers" class="img-fluid product-img">
+                        <p class="text-center fs-4">Bookcases</p>
                     </div>
                 </div>
                 <div class="w-25 text-center">
@@ -249,6 +273,32 @@
 
         <!-- SECTION TEAM PROJECT -->
         <section id="team">
+            <p class="fs-2 text-center mt-4 mb-2 fw-bold">Mentor</p>
+            
+            <div class="row p-5 justify-content-center">
+                <div class="card text-bg-warning shadow mx-4" style="width: 20rem; height: 30rem;">
+                    <img src="https://ca.slack-edge.com/T06GXA315TL-U06HBJ35RH9-fcf8c29e8a40-512" class="card-img" alt="Technology">
+                    <div class="card-body">
+                        <p class="card-text text-center fs-4">Almanik Balingga</p>
+                        <p class="card-text text-center fs-5">Mentor Data Analis</p>
+                    </div>
+                </div>
+                <div class="card text-bg-warning shadow mx-4" style="width: 20rem; height: 30rem;">
+                    <img src="https://ca.slack-edge.com/T06GXA315TL-U06T7GVM6BS-6b9ad713d31d-512" class="card-img" alt="Technology">
+                    <div class="card-body">
+                        <p class="card-text text-center fs-4">Fariz Rizky Rizaldy</p>
+                        <p class="card-text text-center fs-5">Mentor Software Engginer</p>
+                    </div>
+                </div>
+                <div class="card text-bg-warning shadow mx-4" style="width: 20rem; height: 30rem;">
+                    <img src="https://ca.slack-edge.com/T06GXA315TL-U06GGP6JTTR-d7208611bf14-512" class="card-img" alt="Technology">
+                    <div class="card-body">
+                        <p class="card-text text-center fs-4">Achiru Mujahidah</p>
+                        <p class="card-text text-center fs-5">Mentor Section</p>
+                    </div>
+                </div>
+            </div>
+            
             <p class="fs-2 text-center mt-4 mb-2 fw-bold">Team Project</p>
 
             <div class="row p-5 justify-content-center">
@@ -324,7 +374,7 @@
 
             <div class="row p-5 justify-content-center">
                 <div class="card text-bg-warning shadow mx-4" style="width: 20rem; height: 30rem;">
-                    <img src="/src/img/dewi-profil2.jpg" class="card-img" alt="Technology">
+                    <img src="/src/img/dewi-profil.png" class="card-img" alt="Technology">
                     <div class="card-body">
                         <p class="card-text text-center fs-4">Dewi Putriani</p>
                         <p class="card-text text-center fs-5">Quality Assurance</p>
@@ -348,18 +398,22 @@
         </section>
     </main>
 
-    <footer class="footer-grid pt-4 px-4 bg-warning">
+
+    <footer class="footer-grid pt-4 px-4 bg-warning shadow mb-2" style="border-radius: 10px;">
         <div class="row">
-            <div class="">
-                <h2>Cloud Nine</h2>
-                <div class="row">
-                    <p class="col-md-3">
-                        <i class="fa fa-users fa-xs footer-icon" aria-hidden="true"></i> Team 14 - Section Balikpapan
+            <div style="display: flex;">
+                <div class="col-3" style="display: flex;">
+                    <img src="/src/img/logoPutih.png" alt="logo" style="width: 40%; height: 80%;"/>
+                    <h2 class="mt-4">South Store</h2>
+                </div>
+                <div class="col-5">
+                    <p>
+                        <i class="fa fa-users fa-xs footer-icon" aria-hidden="true"></i> Team 15 - Section Balikpapan
                     </p>
-                    <p class="col-md-3">
+                    <p>
                         <i class="fa fa-book fa-xs footer-icon" aria-hidden="true"></i> Revou
                     </p>
-                    <p class="col-md-3">
+                    <p>
                         <i class="fa fa-graduation-cap fa-xs footer-icon" aria-hidden="true"></i> Studi Independen Batch 6
                     </p>
                 </div>
@@ -367,8 +421,13 @@
         </div>
     </footer>
 
+    </div>
+    </div>
+
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="/src/script_login.js"></script>
 </body>
 
