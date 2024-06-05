@@ -62,17 +62,16 @@ function renderData(data) {
   const tableHTML = `
     <div class="container-fluid">
       <div class="row">
-        <div class="col-md-2 shadow-lg pt-3 pb-3 custom-border ml-2 mt-4" style="display: flex; flex-direction: column; justify-content: space-between; background-color: #FFD919">
+        <div class="col-md-2 shadow pt-3 pb-3 custom-border ml-2 mt-4" style="display: flex; flex-direction: column; justify-content: space-between; background-color: #FFD919">
           <ul class="nav nav-pills" style="display: block;">
             <li class="btn-display active p-2 custom-border mb-2" data-link="dashboard"><a href="../page/dashboard.html" class="text-dark">Dashboard</a></li>
             <li class="btn-pilihan active p-2 custom-border mb-2" data-link="tabledata"><a href="../page/table.html" class="text-white">Table Data</a></li>
-            <li class="btn-display active p-2 custom-border mb-2" data-link="team"><a href="../page/team.html" class="text-dark">Information Team</a></li>
           </ul>
           <button type="button" class="btn btn-login btn-block custom-border">
             <a href="../index.html" class="text-dark">LogOut</a>
           </button>
         </div>
-        <div class="mt-4 container shadow-lg pt-4 pb-4 background custom-border">
+        <div class="mt-4 container shadow pt-4 pb-4 background custom-border">
           <div class="container shadow-lg pt-4 pb-4 mb-4 background-table custom-border">
             <div class="col-md">
               <div class="search-bar row mb-4">
