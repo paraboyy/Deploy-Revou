@@ -3,6 +3,27 @@ body {
     background-size: cover;
 }
 
+.container2 {
+    display: inline-block;
+    transition: transform 0.3s ease, background-color 0.3s ease, border 0.3s ease;
+}
+
+.container3 {
+    display: inline-block;
+    transition: transform 0.3s ease, background-color 0.3s ease, border 0.3s ease;
+}
+
+.container2:hover {
+    transform: scale(1.20);
+    background-color: white;
+    border: 3px solid rgb(243, 184, 9);
+}
+
+.container3:hover {
+    transform: scale(1.20);
+    background-color: rgb(243, 184, 9);
+}
+
 .main-top {
     margin-top: 5rem;
     /* margin-left: 2rem; */
@@ -29,6 +50,11 @@ body {
 
 .icon-color {
     color: #000000;
+    transition: transform 0.3s ease, background-color 0.3s ease, border 0.3s ease;
+}
+
+.icon-color:hover {
+    color: #ffffff;
 }
 
 .mt-10 {
@@ -180,6 +206,11 @@ body {
     cursor: pointer;
 }
 
+.content button:hover {
+    color: #000000;
+    background-color: rgb(247, 188, 12);
+}
+
 .card .figure {
     display: flex;
     width: 100%;
@@ -197,6 +228,10 @@ body {
     justify-content: center;
     flex-wrap: wrap;
     gap: 1rem;
+}
+
+.text-warning:hover {
+    color: #000000;
 }
 
 .logo {
@@ -242,5 +277,38 @@ body {
 
     .mx-2 {
         margin: 0 !important;
+    }
+
+    .bg-card, .bg-card2, .bg-card-outline, .bg-card-outline2 {
+        width: 100%;
+        height: 50%;
+        /* font-size: 10%; */
+    }
+
+    .fs-3 {
+        font-size: 1.5rem;
+    }
+
+    .width-card {
+        width: 55%;
+        margin-bottom: 20%;
+    }
+
+    .superstore {
+        width: 80%;
+    }
+
+    .col-md-3 {
+        width: 50%;
+        margin-bottom: 10%;
+    }
+
+    .card {
+        margin-bottom: 10%;
+    }
+
+    .product-img {
+        width: 50%;
+        margin-left: 25%;
     }
 }

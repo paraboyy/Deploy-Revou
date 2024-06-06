@@ -74,9 +74,20 @@
                 <div>
                     <div class="container d-flex justify-content-between">
                         <!-- Chart 1 -->
-                        <div class="shadow m-2 pt-4 pb-4 btn-display custom-border table-data" style="width: 100%;">
+                        <div class="shadow m-2 pt-4 pb-4 btn-display custom-border table-data" style="width: 50%;">
                             <h3 class="text-center">Sales Trend</h3>
                             <canvas class="p-2" id="chart-sales-per-year" width="400px" height="200px"></canvas>
+                        </div>
+                        <!-- Chart 1 -->
+                        <div class="shadow m-2 pt-4 pb-4 btn-display custom-border table-data" style="width: 50%;">
+                            <h3 class="text-center">Sales Trend</h3>
+                            <select id="year-selector" onchange="updateChart()">
+                                <option value="2014">2014</option>
+                                <option value="2015">2015</option>
+                                <option value="2016">2016</option>
+                                <option value="2017">2017</option>
+                            </select>
+                            <canvas class="p-2" id="chart-sales-per-month" width="400px" height="200px"></canvas>
                         </div>
                     </div>
                     <div class="container d-flex justify-content-between">

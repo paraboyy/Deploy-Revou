@@ -44,27 +44,43 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // Validasi input
         if (name === "" || email === "" || password === "") {
-            alert('Semua kolom harus diisi.');
+            Swal.fire({
+                icon: "info",
+                text: "Email dan password harus diisi.",
+            });    
+            // alert('Semua kolom harus diisi.');
             return;
         }
 
         // Validasi panjang nama
         if (name.length < 5) {
-            alert('Nama harus terdiri dari minimal 5 karakter.');
+            Swal.fire({
+                icon: "info",
+                text: "Nama harus terdiri dari minimal 5 karakter.",
+            });    
+            // alert('Nama harus terdiri dari minimal 5 karakter.');
             return;
         }
 
         // Validasi format email
         const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         if (!emailPattern.test(email)) {
-            alert('Format email tidak valid.');
+            Swal.fire({
+                icon: "warning",
+                text: "Format email tidak valid.",
+            });    
+            // alert('Format email tidak valid.');
             return;
         }
 
         // Validasi panjang password dan keharusan ada angka
         const passwordPattern = /^(?=.*\d).{8,}$/;
         if (!passwordPattern.test(password)) {
-            alert('Password harus terdiri dari minimal 8 karakter dan mengandung setidaknya satu angka.');
+            Swal.fire({
+                icon: "warning",
+                text: "Password harus terdiri dari minimal 8 karakter dan mengandung setidaknya satu angka.",
+            });  
+            // alert('Password harus terdiri dari minimal 8 karakter dan mengandung setidaknya satu angka.');
             return;
         }
 
@@ -72,11 +88,19 @@ document.addEventListener('DOMContentLoaded', function() {
         const users = getUsers();
         const userExists = users.some(user => user.email === email);
         if (userExists) {
-            alert('Email sudah terdaftar.');
+            Swal.fire({
+                icon: "error",
+                text: "Email sudah terdaftar.",
+            });  
+            // alert('Email sudah terdaftar.');
         } else {
             // Menambahkan pengguna baru ke dalam data pengguna
             saveUser({ name, email, password });
-            alert('Pendaftaran berhasil!');
+            Swal.fire({
+                icon: "success",
+                text: "Pendaftaran berhasil!",
+            });  
+            // alert('Pendaftaran berhasil!');
         }
     });
 
@@ -89,7 +113,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // Validasi input
         if (email === "" || password === "") {
-            alert('Email dan password harus diisi.');
+            Swal.fire({
+                icon: "info",
+                text: "Email dan password harus diisi.",
+            });            
+            // alert('Email dan password harus diisi.');
             return;
         }
 
@@ -97,10 +125,19 @@ document.addEventListener('DOMContentLoaded', function() {
         const users = getUsers();
         const user = users.find(user => user.email === email && user.password === password);
         if (user) {
-            alert('Login berhasil!');
+            // Swal.fire({
+            //     icon: "success",
+            //     title: "Succes",
+            //     text: "Login berhasil",
+            // });
             window.location.href = 'page/dashboard.html';
         } else {
-            alert('Email atau password salah.');
+            Swal.fire({
+                icon: "error",
+                title: "Error",
+                text: "Email atau password salah!",
+            });
+            // alert('Email atau password salah.');
         }
     });
 });

@@ -1,0 +1,58 @@
+{
+    "2014": [
+        {"month": "January", "total_sales": 120},
+        {"month": "February", "total_sales": 150},
+        {"month": "March", "total_sales": 170},
+        {"month": "April", "total_sales": 180},
+        {"month": "May", "total_sales": 210},
+        {"month": "June", "total_sales": 250},
+        {"month": "July", "total_sales": 270},
+        {"month": "August", "total_sales": 300},
+        {"month": "September", "total_sales": 320},
+        {"month": "October", "total_sales": 350},
+        {"month": "November", "total_sales": 370},
+        {"month": "December", "total_sales": 400}
+    ],
+    "2015": [
+        {"month": "January", "total_sales": 130},
+        {"month": "February", "total_sales": 160},
+        {"month": "March", "total_sales": 180},
+        {"month": "April", "total_sales": 190},
+        {"month": "May", "total_sales": 220},
+        {"month": "June", "total_sales": 260},
+        {"month": "July", "total_sales": 280},
+        {"month": "August", "total_sales": 310},
+        {"month": "September", "total_sales": 330},
+        {"month": "October", "total_sales": 360},
+        {"month": "November", "total_sales": 380},
+        {"month": "December", "total_sales": 410}
+    ],
+    "2016": [
+        {"month": "January", "total_sales": 140},
+        {"month": "February", "total_sales": 170},
+        {"month": "March", "total_sales": 190},
+        {"month": "April", "total_sales": 200},
+        {"month": "May", "total_sales": 230},
+        {"month": "June", "total_sales": 270},
+        {"month": "July", "total_sales": 290},
+        {"month": "August", "total_sales": 320},
+        {"month": "September", "total_sales": 340},
+        {"month": "October", "total_sales": 370},
+        {"month": "November", "total_sales": 390},
+        {"month": "December", "total_sales": 420}
+    ],
+    "2017": [
+        {"month": "January", "total_sales": 150},
+        {"month": "February", "total_sales": 180},
+        {"month": "March", "total_sales": 200},
+        {"month": "April", "total_sales": 210},
+        {"month": "May", "total_sales": 240},
+        {"month": "June", "total_sales": 280},
+        {"month": "July", "total_sales": 300},
+        {"month": "August", "total_sales": 330},
+        {"month": "September", "total_sales": 350},
+        {"month": "October", "total_sales": 380},
+        {"month": "November", "total_sales": 400},
+        {"month": "December", "total_sales": 430}
+    ]
+}

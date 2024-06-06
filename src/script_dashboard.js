@@ -120,6 +120,7 @@ class Dashboard {
         this.createCharts = this.createCharts.bind(this);
         this.data = {} ;
         this.dataSalesYear = {} ;
+        this.dataSalesMonth = {} ;
         this.dataSihpmode = {} ;
         this.dataSegment = {} ;
     }
@@ -135,6 +136,8 @@ class Dashboard {
         try {
             const response = await fetch('../src/json/SalesYear.json');
             this.dataSalesYear = await response.json();
+            const responseMonth = await fetch('../src/json/SalesMont.json');
+            this.dataSalesMonth = await responseMonth.json();
             const response2 = await fetch('../src/json/TotalData.json');
             this.data = await response2.json();
             const responseshipmode = await fetch('../src/json/ShipmodeData.json');
@@ -166,6 +169,7 @@ class Dashboard {
         this.createSalesChartPerSegment();
         this.createSalesChartPerYear();
         this.createSalesChartByShipmode();
+        this.createSalesChartPerMonth();
     }
 
     // Create chart for total sales per segment
@@ -276,9 +280,42 @@ class Dashboard {
                 }
             });
         }
+        // Create chart for total sales per month
+        createSalesChartPerMonth() {
+        const yearSelector = document.getElementById('year-selector');
+        const year = yearSelector.value;
+        const ctx = document.getElementById('chart-sales-per-month').getContext('2d');
+        // const year = "2014"; // Replace with dynamic year selection
+        const labels = this.dataSalesMonth[year].map(item => item.month);
+        const salesData = this.dataSalesMonth[year].map(item => item.total_sales);
+        new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: labels,
+                datasets: [{
+                    label: `Sales in ${year}`,
+                    data: salesData,
+                    backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                    borderColor: 'rgba(75, 192, 192, 1)',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+    }
 }
 
 document.addEventListener('DOMContentLoaded', () => {
     const dashboard = new Dashboard();
     dashboard.mounted();
+
+    document.getElementById('year-selector').addEventListener('change', () => {
+        this.createSalesChartPerMonth();
+    });
 });
