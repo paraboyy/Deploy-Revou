@@ -20,7 +20,7 @@ body {
 }
 
 .custom-border {
-    border: 2px solid rgba(0, 0, 0, 0.5);
+    border: 2px solid rgba(0, 0, 0, 0.5);   
 }
 
 .btn-pilihan{
@@ -31,7 +31,8 @@ body {
 }
 
 .background{
-  background-color: #FFD919;
+  background: linear-gradient(to bottom, #ffbb00, #feb47b);
+  /* background-color: #FFD919; */
 }
 
 .background-table{
@@ -39,13 +40,24 @@ body {
   border-radius: 0.5rem;
 }
 
+.col-md-2 {
+    background: linear-gradient(to bottom, #ffbb00, #feb47b);
+
+}
+
 .table-border{
   border: 2px solid black;
 }
 
 .table-data{
+  background-color: #FFEC8C;
   border-radius: 2%;
   width: 50%;
+  transition: transform 0.3s ease, background-color 0.3s ease, border 0.3s ease;
+}
+
+.table-data:hover {
+  transform: scale(1.10);
 }
 
 .profile-page {
@@ -106,6 +118,18 @@ body {
   background-color: #d2af00;
 }
 
-.background-table:hover {
+/* .background-table:hover {
   background-color: #d2af00;
-}
+  transform: scale(0.80);
+} */
+
+ @media (max-width: 768px) {
+  .nav-pills {
+    display: flex;
+  }
+
+  .btn-pilihan, .btn-display {
+    width: 45%;
+    margin-left: 5%;
+  }
+ }

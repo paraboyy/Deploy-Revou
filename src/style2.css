@@ -35,7 +35,7 @@ body {
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px); /* Untuk dukungan Safari */
     border-radius: 10px;
-    border: 2px solid rgb(145, 145, 145);
+    border: 4px solid rgb(145, 145, 145);
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -211,6 +211,38 @@ body {
     background-color: rgb(247, 188, 12);
 }
 
+.card-color {
+    transition: transform 0.3s ease, background-color 0.3s ease, border 0.3s ease;
+    background-color: rgb(247, 188, 12);
+}
+
+.card-color:hover {
+    background-color: aliceblue;
+    transform: scale(0.90);
+}
+
+.card-product {
+    background-color: rgb(247, 188, 12);
+    border-radius: 35px; 
+    margin: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, background-color 0.3s ease, border 0.3s ease;
+}
+
+.card-product:hover {
+    transform: scale(0.90);
+    background-color: rgb(224, 224, 224);
+    border-radius: 35px; 
+    margin: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 2px solid black;
+}
+
+.font-card {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+
 .card .figure {
     display: flex;
     width: 100%;
@@ -310,5 +342,9 @@ body {
     .product-img {
         width: 50%;
         margin-left: 25%;
+    }
+
+    .nav-link {
+        margin-top: 40%;
     }
 }
