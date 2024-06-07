@@ -12,19 +12,19 @@ document.addEventListener('DOMContentLoaded', (event) => {
     }).addTo(map);
 
     var marker = L.marker([10.161293478834914, -67.99232705848658]).addTo(map)
-      .bindPopup('<b>South Store</b>.')
+      .bindPopup('<a class="text-dark" href="https://maps.app.goo.gl/NZqccDTVLgTxeaxf7"><b>South Store</b></a>')
       .openPopup();
 
     var marker = L.marker([10.16118044471513, -67.99772431678336]).addTo(map)
-      .bindPopup('<b>South Store2</b>.')
+      .bindPopup('<a class="text-dark" href="https://maps.app.goo.gl/NZqccDTVLgTxeaxf7"><b>South Store2</b></a>')
       .openPopup();
 
     var marker = L.marker([10.155511107364575, -68.02961151703887]).addTo(map)
-      .bindPopup('<b>South Store3</b>.')
+      .bindPopup('<a class="text-dark" href="https://maps.app.goo.gl/NZqccDTVLgTxeaxf7"><b>South Store3</b></a>')
       .openPopup();
 
     var marker = L.marker([10.137054230686253, -68.0013230435792]).addTo(map)
-      .bindPopup('<b>South Store4</b>.')
+      .bindPopup('<a class="text-dark" href="https://maps.app.goo.gl/NZqccDTVLgTxeaxf7"><b>South Store4</b></a>')
       .openPopup();
 
     function showNextSlide() {
