@@ -92,11 +92,10 @@ function renderData(data) {
                 <input type="text" class="form-control w-50" id="search-input" placeholder="Search...">
                 <button class="btn btn-warning ml-2 text-dark" id="search-button">Search</button>
               </div>
-              <div class="table-bordered">
-                <div class="card-header">
+                <div class="card-header shadow">
                   Daftar Order Pelanggan
                 </div>
-                <table class="table table-striped">
+                <table class="table table-primary table-striped shadow">
                   <thead>
                     <tr>
                       <th scope="col" onclick="toggleSort('Order_ID')">ID Order</th>
@@ -111,7 +110,6 @@ function renderData(data) {
                     ${renderTableRows(paginatedData)}
                   </tbody>
                 </table>
-              </div>
               <div class="d-flex justify-content-center mt-3">
                 ${renderPaginationButtons(currentPage, Math.ceil(data.length / pageSize) - 1)}
               </div>
@@ -119,11 +117,10 @@ function renderData(data) {
           </div>
           <div class="container shadow-lg pt-4 pb-4 background-table custom-border">
             <div class="col-md">
-              <div class="table-bordered">
                 <div class="card-header">
                   Data Lokasi Pelanggan
                 </div>
-                <table class="table table-striped">
+                <table class="table table-primary table-striped shadow">
                   <thead>
                     <tr>
                       <th scope="col">Nama Customer</th>
@@ -138,7 +135,6 @@ function renderData(data) {
               <div class="d-flex justify-content-center mt-3">
                 ${renderPaginationButtons(currentPage, Math.ceil(data.length / pageSize) - 1)}
               </div>
-            </div>
           </div>
         </div>
       </div>

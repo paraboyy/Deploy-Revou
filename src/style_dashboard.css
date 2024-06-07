@@ -19,6 +19,10 @@ body {
   background-color: #FFB400;
 }
 
+.btn:hover {
+  background-color: #FFEC8C;
+}
+
 .custom-border {
     border: 2px solid rgba(0, 0, 0, 0.5);   
 }
