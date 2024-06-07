@@ -3,6 +3,30 @@ document.addEventListener('DOMContentLoaded', (event) => {
     const slides = document.querySelectorAll('.text-slide');
     const totalSlides = slides.length;
 
+    // Inisialisasi peta
+    var map = L.map('map').setView([10.1527028,-68.012251], 13); // Koordinat Jakarta
+
+    // Tambahkan tile layer ke peta
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(map);
+
+    var marker = L.marker([10.161293478834914, -67.99232705848658]).addTo(map)
+      .bindPopup('<b>South Store</b>.')
+      .openPopup();
+
+    var marker = L.marker([10.16118044471513, -67.99772431678336]).addTo(map)
+      .bindPopup('<b>South Store2</b>.')
+      .openPopup();
+
+    var marker = L.marker([10.155511107364575, -68.02961151703887]).addTo(map)
+      .bindPopup('<b>South Store3</b>.')
+      .openPopup();
+
+    var marker = L.marker([10.137054230686253, -68.0013230435792]).addTo(map)
+      .bindPopup('<b>South Store4</b>.')
+      .openPopup();
+
     function showNextSlide() {
         currentIndex = (currentIndex + 1) % totalSlides;
         document.querySelector('.text-slider').style.top = `-${currentIndex * 50}px`; // Adjust the height here too

@@ -9,6 +9,9 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">    
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="../src/style2.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+    crossorigin=""/>
     <title>South Strore</title>
 </head>
 
@@ -121,6 +124,12 @@
                     </div>
                 </div>
             </div>
+
+            <p class="fs-2 text-center mt-5 mb-2 fw-bold">Store Location</p>
+            <div class="card-body bg-warning p-4 border-custom shadow" style="height: 500px">
+                <div id="map" ref="map" style="height: 52%; width: 89%; position:absolute;"></div>
+            </div>
+            
 
             <p class="fs-2 text-center mt-4 mb-5 fw-bold">Project Capstone</p>
 
@@ -356,6 +365,9 @@
                             <a href="https://api.whatsapp.com/send?phone=082340619880" target="_blank" class="text-dark text-dark"><i class="fab fa-2x fa-whatsapp mx-2"></i></a>
                         </div>
                     </div>
+                    <div class="card-description">
+                        <p class="description-text">Hallo Saya Iqbal, Saya merupakan team leader dari team 15</p>
+                    </div>
                 </div>
                 <div class="card text-bg-warning shadow mx-4" style="width: 20rem; height: 30rem;">
                     <img src="/src/img/adhim-profil.jpeg" class="card-img" alt="Office Supplies">
@@ -367,6 +379,9 @@
                             <a href="https://www.linkedin.com/adhimsatyanugraha" target="_blank" class="text-dark"><i class="fab fa-linkedin fa-2x text-dark mx-2"></i> </a>
                             <a href="https://api.whatsapp.com/send?phone=082340619880" target="_blank" class="text-dark text-dark"><i class="fab fa-2x fa-whatsapp mx-2"></i></a>
                         </div>
+                    </div>
+                    <div class="card-description">
+                        <p class="description-text">Hay hay hay, kenalin aku Adhim dari Univeristas Udayana Bali. Di project ini aku menjadi bagian dari Team Pitch Deck.</p>
                     </div>
                 </div>
                 <div class="card text-bg-warning shadow mx-4" style="width: 20rem; height: 30rem;">
@@ -380,6 +395,9 @@
                             <a href="https://api.whatsapp.com/send?phone=082340619880" target="_blank" class="text-dark text-dark"><i class="fab fa-2x fa-whatsapp mx-2"></i></a>
                         </div>
                     </div>
+                    <div class="card-description">
+                        <p class="description-text">Kenalin Aku alda</p>
+                    </div>
                 </div>
             </div>
             
@@ -390,9 +408,12 @@
                         <p class="card-text text-center fs-4">Muhammad Nur Firmansyah</p>
                         <p class="card-text text-center fs-5">Pitch Deck Team</p>
                         <div style="justify-content: center; display: flex;">
-                            <a href="https://www.instagram.com/imparaboyy" target="_blank" class="text-dark"><i class="fab fa-instagram fa-2x text-dark mx-2"></i> </a>
-                            <a href="https://www.linkedin.com/adhimsatyanugraha" target="_blank" class="text-dark"><i class="fab fa-linkedin fa-2x text-dark mx-2"></i> </a>
-                            <a href="https://api.whatsapp.com/send?phone=082340619880" target="_blank" class="text-dark text-dark"><i class="fab fa-2x fa-whatsapp mx-2"></i></a>
+                            <a href="https://www.instagram.com/firrmansyhm?igsh=d2cybWt5Y3FwNXMw&utm_source=qr" target="_blank" class="text-dark"><i class="fab fa-instagram fa-2x text-dark mx-2"></i> </a>
+                            <a href="https://www.linkedin.com/in/muhammad-nur-firmansyah-b31158237?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank" class="text-dark"><i class="fab fa-linkedin fa-2x text-dark mx-2"></i> </a>
+                            <a href="https://api.whatsapp.com/send?phone=082142623280" target="_blank" class="text-dark text-dark"><i class="fab fa-2x fa-whatsapp mx-2"></i></a>
+                        </div>
+                        <div class="card-description">
+                            <p class="description-text">Halo semuanya, aku Firman dari Universitas Airlangga Surabaya selaku tim Pitchdeck dari project yang keren ini👍🏻</p>
                         </div>
                     </div>
                 </div>
@@ -402,10 +423,14 @@
                         <p class="card-text text-center fs-4">Pras Tio Rifki Wijaya</p>
                         <p class="card-text text-center fs-5">Frontend Engginer</p>
                         <div style="justify-content: center; display: flex;">
-                            <a href="https://www.instagram.com/imparaboyy" target="_blank" class="text-dark"><i class="fab fa-instagram fa-2x text-dark mx-2"></i> </a>
-                            <a href="https://www.linkedin.com/adhimsatyanugraha" target="_blank" class="text-dark"><i class="fab fa-linkedin fa-2x text-dark mx-2"></i> </a>
-                            <a href="https://api.whatsapp.com/send?phone=082340619880" target="_blank" class="text-dark text-dark"><i class="fab fa-2x fa-whatsapp mx-2"></i></a>
+                            <a href="https://www.instagram.com/prastio_rifky" target="_blank" class="text-dark"><i class="fab fa-instagram fa-2x text-dark mx-2"></i> </a>
+                            <a href="https://www.linkedin.com/in/prastio-rifki-wijaya-046166243/?original_referer=https%3A%2F%2Fwww%2Elinkedin%2Ecom%2F&originalSubdomain=id" target="_blank" class="text-dark"><i class="fab fa-linkedin fa-2x text-dark mx-2"></i> </a>
+                            <a href="https://api.whatsapp.com/send?phone=081316585841" target="_blank" class="text-dark text-dark"><i class="fab fa-2x fa-whatsapp mx-2"></i></a>
                         </div>
+                    </div>
+                    <div class="card-description">
+                        <p class="description-text">Hello, I'm Pras! I'm a dedicated Frontend Engineer with a 
+                                passion for crafting seamless and engaging user experiences.</p>
                     </div>
                 </div>
                 <div class="card text-bg-warning shadow mx-4" style="width: 20rem; height: 30rem;">
@@ -414,10 +439,14 @@
                         <p class="card-text text-center fs-4">Roidah Sahda</p>
                         <p class="card-text text-center fs-5">Frontend Engineer</p>
                         <div style="justify-content: center; display: flex;">
-                            <a href="https://www.instagram.com/imparaboyy" target="_blank" class="text-dark"><i class="fab fa-instagram fa-2x text-dark mx-2"></i> </a>
-                            <a href="https://www.linkedin.com/adhimsatyanugraha" target="_blank" class="text-dark"><i class="fab fa-linkedin fa-2x text-dark mx-2"></i> </a>
-                            <a href="https://api.whatsapp.com/send?phone=082340619880" target="_blank" class="text-dark text-dark"><i class="fab fa-2x fa-whatsapp mx-2"></i></a>
+                            <a href="https://www.instagram.com/aresroxy" target="_blank" class="text-dark"><i class="fab fa-instagram fa-2x text-dark mx-2"></i> </a>
+                            <a href="http://linkedin.com/in/roidah-sahda-a429b32b1" target="_blank" class="text-dark"><i class="fab fa-linkedin fa-2x text-dark mx-2"></i> </a>
+                            <a href="https://api.whatsapp.com/send?phone=6281224920220" target="_blank" class="text-dark text-dark"><i class="fab fa-2x fa-whatsapp mx-2"></i></a>
                         </div>
+                    </div>
+                    <div class="card-description">
+                        <p class="description-text">Haloo, aku Roidah! Aku dari Universitas Tadulako 
+                                dan di project ini aku bagian dari Frontend Engineer</p>
                     </div>
                 </div>
             </div>
@@ -434,6 +463,9 @@
                             <a href="https://api.whatsapp.com/send?phone=082340619880" target="_blank" class="text-dark text-dark"><i class="fab fa-2x fa-whatsapp mx-2"></i></a>
                         </div>
                     </div>
+                    <div class="card-description">
+                        <p class="description-text">Haloo, aku Dwi 
+                    </div>
                 </div>
                 <div class="card text-bg-warning shadow mx-4" style="width: 20rem; height: 30rem;">
                     <img src="/src/img/jinan-profil.png" class="card-img" alt="Office Supplies">
@@ -446,6 +478,9 @@
                             <a href="https://api.whatsapp.com/send?phone=082340619880" target="_blank" class="text-dark text-dark"><i class="fab fa-2x fa-whatsapp mx-2"></i></a>
                         </div>
                     </div>
+                    <div class="card-description">
+                        <p class="description-text">Haloo, aku Jinan 
+                    </div>
                 </div>
                 <div class="card text-bg-warning shadow mx-4" style="width: 20rem; height: 30rem;">
                     <img src="/src/img/nurul-profil.png" class="card-img" alt="Furniture">
@@ -453,10 +488,13 @@
                         <p class="card-text text-center fs-4">⁠Nurul Ramadan</p>
                         <p class="card-text text-center fs-5">Deployment Team</p>
                         <div style="justify-content: center; display: flex;">
-                            <a href="https://www.instagram.com/imparaboyy" target="_blank" class="text-dark"><i class="fab fa-instagram fa-2x text-dark mx-2"></i> </a>
-                            <a href="https://www.linkedin.com/adhimsatyanugraha" target="_blank" class="text-dark"><i class="fab fa-linkedin fa-2x text-dark mx-2"></i> </a>
-                            <a href="https://api.whatsapp.com/send?phone=082340619880" target="_blank" class="text-dark text-dark"><i class="fab fa-2x fa-whatsapp mx-2"></i></a>
+                            <a href="https://www.instagram.com/nrl__rmdn" target="_blank" class="text-dark"><i class="fab fa-instagram fa-2x text-dark mx-2"></i> </a>
+                            <a href="www.linkedin.com/in/nurul-ramadan-869b33224" target="_blank" class="text-dark"><i class="fab fa-linkedin fa-2x text-dark mx-2"></i> </a>
+                            <a href="https://api.whatsapp.com/send?phone=083869967397" target="_blank" class="text-dark text-dark"><i class="fab fa-2x fa-whatsapp mx-2"></i></a>
                         </div>
+                    </div>
+                    <div class="card-description">
+                        <p class="description-text">Haloo, aku Nurul 
                     </div>
                 </div>
 
@@ -467,10 +505,13 @@
                         <p class="card-text text-center fs-4">Dewi Putriani</p>
                         <p class="card-text text-center fs-5">Quality Assurance</p>
                         <div style="justify-content: center; display: flex;">
-                            <a href="https://www.instagram.com/imparaboyy" target="_blank" class="text-dark"><i class="fab fa-instagram fa-2x text-dark mx-2"></i> </a>
-                            <a href="https://www.linkedin.com/adhimsatyanugraha" target="_blank" class="text-dark"><i class="fab fa-linkedin fa-2x text-dark mx-2"></i> </a>
-                            <a href="https://api.whatsapp.com/send?phone=082340619880" target="_blank" class="text-dark text-dark"><i class="fab fa-2x fa-whatsapp mx-2"></i></a>
+                            <a href="https://www.instagram.com/deputriani" target="_blank" class="text-dark"><i class="fab fa-instagram fa-2x text-dark mx-2"></i> </a>
+                            <!-- <a href="https://www.linkedin.com/adhimsatyanugraha" target="_blank" class="text-dark"><i class="fab fa-linkedin fa-2x text-dark mx-2"></i> </a> -->
+                            <a href="https://api.whatsapp.com/send?phone=6285715696586" target="_blank" class="text-dark text-dark"><i class="fab fa-2x fa-whatsapp mx-2"></i></a>
                         </div>
+                    </div>
+                    <div class="card-description">
+                        <p class="description-text">Halo saya Dewi dari Universitas Nusantara PGRI, dalam project ini saya bagian dari QA team. 
                     </div>
                 </div>
                 <div class="card text-bg-warning shadow mx-4" style="width: 20rem; height: 30rem;">
@@ -479,10 +520,13 @@
                         <p class="card-text text-center fs-4">Intan Ramadhani</p>
                         <p class="card-text text-center fs-5">Quality Assurance</p>
                         <div style="justify-content: center; display: flex;">
-                            <a href="https://www.instagram.com/imparaboyy" target="_blank" class="text-dark"><i class="fab fa-instagram fa-2x text-dark mx-2"></i> </a>
-                            <a href="https://www.linkedin.com/adhimsatyanugraha" target="_blank" class="text-dark"><i class="fab fa-linkedin fa-2x text-dark mx-2"></i> </a>
-                            <a href="https://api.whatsapp.com/send?phone=082340619880" target="_blank" class="text-dark text-dark"><i class="fab fa-2x fa-whatsapp mx-2"></i></a>
+                            <a href="https://www.instagram.com/intanramadhani16_" target="_blank" class="text-dark"><i class="fab fa-instagram fa-2x text-dark mx-2"></i> </a>
+                            <a href="https://www.linkedin.com/intan-ramadhani16" target="_blank" class="text-dark"><i class="fab fa-linkedin fa-2x text-dark mx-2"></i> </a>
+                            <a href="https://api.whatsapp.com/send?phone=082140105339" target="_blank" class="text-dark text-dark"><i class="fab fa-2x fa-whatsapp mx-2"></i></a>
                         </div>
+                    </div>
+                    <div class="card-description">
+                        <p class="description-text">Hello semuaaaaa, kenalin aku Intan dari Universitas Airlangga Surabaya. Project ini aku bagian dari team Quality Assurance. Gass yuk bertemanlah kita kitaa. 
                     </div>
                 </div>
                 <div class="card text-bg-warning shadow mx-4" style="width: 20rem; height: 32rem;">
@@ -491,10 +535,13 @@
                         <p class="card-text text-center fs-4">Wysda Sidang Adi Nugraha</p>
                         <p class="card-text text-center fs-5">Quality Assurance</p>
                         <div style="justify-content: center; display: flex;">
-                            <a href="https://www.instagram.com/imparaboyy" target="_blank" class="text-dark"><i class="fab fa-instagram fa-2x text-dark mx-2"></i> </a>
-                            <a href="https://www.linkedin.com/adhimsatyanugraha" target="_blank" class="text-dark"><i class="fab fa-linkedin fa-2x text-dark mx-2"></i> </a>
-                            <a href="https://api.whatsapp.com/send?phone=082340619880" target="_blank" class="text-dark text-dark"><i class="fab fa-2x fa-whatsapp mx-2"></i></a>
+                            <a href="https://www.instagram.com/wysda_nugraha" target="_blank" class="text-dark"><i class="fab fa-instagram fa-2x text-dark mx-2"></i> </a>
+                            <a href="www.linkedin.com/in/wysda_nugraha" target="_blank" class="text-dark"><i class="fab fa-linkedin fa-2x text-dark mx-2"></i> </a>
+                            <a href="https://api.whatsapp.com/send?phone=085156959369" target="_blank" class="text-dark text-dark"><i class="fab fa-2x fa-whatsapp mx-2"></i></a>
                         </div>
+                    </div>
+                    <div class="card-description">
+                        <p class="description-text">Haloo semuaa, Kenalin aku Wysda dari Universitas Sebelas Maret. Di capstone project ini aku adalah bagian dari Quality Assurance Team.
                     </div>
                 </div>
             </div>
@@ -527,6 +574,9 @@
     </div>
     </div>
 
+     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+     crossorigin=""></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
