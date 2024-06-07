@@ -1,0 +1,36 @@
+body, html {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #ffb300, #dfa002);
+    color: rgb(0, 0, 0);
+    font-family: Arial, sans-serif;
+}
+
+.welcome-container {
+    text-align: center;
+    animation: fadeOut 2s 3s forwards; /* animasi fade out setelah 3 detik, berlangsung selama 2 detik */
+}
+
+.welcome-container h1 {
+    font-size: 3rem;
+    animation: fadeIn 2s; /* animasi fade in selama 2 detik */
+}
+
+.welcome-container p {
+    font-size: 1.5rem;
+    animation: fadeIn 2s; /* animasi fade in selama 2 detik */
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}

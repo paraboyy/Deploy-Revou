@@ -21,6 +21,13 @@ function fetchData() {
 
 // Function to render table rows
 function renderTableRows(data) {
+  if (data.length === 0) {
+    return `
+      <tr>
+        <td colspan="6" class="text-center">Data tidak ditemukan</td>
+      </tr>
+    `;
+  }
   return data.map(item => `
     <tr>
       <td>${item.Order_ID}</td>
@@ -34,6 +41,13 @@ function renderTableRows(data) {
 }
 
 function renderTableRowsCustomer(data) {
+  if (data.length === 0) {
+    return `
+      <tr>
+        <td colspan="2" class="text-center">Data tidak ditemukan</td>
+      </tr>
+    `;
+  }
   return data.map(item => `
     <tr>
       <td>${item.Customer_Name}</td>
@@ -185,6 +199,15 @@ function searchButtonClick() {
     item.Quantity.toString().toLowerCase().includes(query) ||
     item.Sales.toString().toLowerCase().includes(query)
   );
+
+  if (filteredData.length === 0) {
+    Swal.fire({
+          icon: "warning",
+          text: "Data tidak ditemuka",
+      });   
+    // alert('Data tidak ditemukan');
+  }
+
   currentPage = 0;
   renderData(filteredData);
 }

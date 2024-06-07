@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="/src/img/logosuperstore.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="src/style2.css">
+    <title>South Strore</title>
+</head>
+
+<body>
+    <!-- <nav class="navbar bg-warning fixed-top">
+        <div class="container-fluid">
+            <div class="col-4">
+                <img src="/src/img/logosuperstore.png" alt="logo" class="logo"/>
+                <a class="navbar-brand" href="#">South Store</a>
+            </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="offcanvas bg-warning offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Offcanvas</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#home">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#product">Product</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#team">Team Project</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav> -->
+
+    <div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-auto bg-warning sticky-top">
+            <div class="d-flex flex-sm-column flex-row flex-nowrap bg-warning align-items-center sticky-top">
+                <!-- <a href="/" class="d-block p-3 link-dark text-decoration-none" title="" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Icon-only">
+                    <i class="bi-bootstrap fs-1"></i>
+                </a> -->
+                <img src="/src/img/logoPutih.png" alt="logo" class="logo mt-4"/>
+                <ul class="nav nav-pills nav-flush flex-sm-column flex-row flex-nowrap mb-auto text-center align-items-center">
+                    <li class="nav-item">
+                        <a href="#home" class="nav-link py-3 px-2" title="" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Home">
+                            <i class="bi bi-house-fill icon-color fs-2"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#product" class="nav-link py-3 px-2" title="" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Produk">
+                            <i class="bi bi-box-seam-fill icon-color fs-2"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#team" class="nav-link py-3 px-2" title="" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Team Projects">
+                            <i class="bi bi-people-fill icon-color fs-2"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-sm min-vh-100">
+
+    <main>
+        <!-- SECTION HOME -->
+        <section id="home">
+            <div class="mask-group">
+                <div class="background">
+                    <img src="/src/img/bg1.png" alt="background" class="shadow mt-2" style="border-radius: 10px;">
+                </div>
+                <div class="superstore">
+                    <p class="mt-5 fs-2 text-light">About Me</p>
+                    <p class="fs-5 text-light">Superstore menyediakan Aplikasi Kasir berbasis cloud yang membantu mengelola transaksi penjualan dan pembelian, serta menyajikan laporan keuangan toko Anda.</p>
+                </div> 
+                <div class="superstore">
+                    <div class="overlay glass-effect rounded-2 shadow-lg">
+                        <div class="content">
+                            <center>
+                                <div class="sign-in-form active">
+                                    <h2>Login</h2>
+                                    <p class="text">Untuk melihat dashboard</p>
+                                    <form>
+                                        <input type="email" name="email" placeholder="Email" required>
+                                        <input type="password" name="password" placeholder="Password" required>
+                                        <button id="loginBtn">Masuk</button> <br>
+                                        <a href="#" class="text-warning" id="showRegisterForm">Buat Akun</a>
+                                    </form>
+                                </div>
+
+                                <div class="sign-up-form">
+                                    <h2>Daftar</h2>
+                                    <p class="text">Silahkan daftar untuk akun baru</p>
+                                    <form>
+                                        <input type="text" name="name" placeholder="Nama" required>
+                                        <input type="email" name="email" placeholder="Email" required>
+                                        <input type="password" name="password" placeholder="Password" required>
+                                        <button id="registerBtn">Daftar</button> <br>
+                                        <a href="#" class="text-warning" id="showLoginForm">Masuk</a>
+                                    </form>
+                                </div>
+                            </center>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <p class="fs-2 text-center mt-4 mb-5 fw-bold">Project Capstone</p>
+
+            <div class="row justify-content-center">
+                <div class="width-card mx-5">
+                    <h3 class="fw-bold text-center">Background Project</h3>
+                    <div class="container2 bg-card p-5 shadow">
+                        <p class="fs-3">Penjualan (sales) di wilayah South merupakan penjualan dengan total sales terkecil selama 2014 - 2017.</p>
+                    </div>
+                    <h3 class="fw-bold mt-4 text-center">Problem Statment</h3>
+                    <div class="container3 bg-card-outline2 mb-4 p-5 shadow">
+                        <p class="fs-3">Bagaimana strategi yang dapat diterapkan guna meningkatkan penjualan di wilayah Selatan sebesar 20% dalam rentang waktu satu tahun?</p>
+                    </div>
+                </div>
+                <div class="width-card mx-5">
+                    <h3 class="fw-bold text-center">Project Goals</h3>
+                    <div class="container3 bg-card-outline p-5 shadow">
+                        <p class="fs-3">Meningkatkan penjualan di wilayah selatan sebesar 20% dalam jangka waktu 1 tahun</p>
+                    </div>
+                    <h3 class="fw-bold mt-4 text-center">Recomendation</h3>
+                    <div class="container2 bg-card2 mb-4 p-5 shadow">
+                        <p class="fs-5">Menaikkan harga barang pada segment home office dan category furniture.</p>
+                        <p class="fs-5">Mengoptimalkan pemasaran pada kota - kota dengan sales rendah.</p>
+                        <p class="fs-5">Menghapus opsi pengiriman same day untuk mengurangi biaya dan mengoptimalkan sumber daya pengiriman.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION PRODUCT -->
+        <section id="product">
+            <p class="fs-2 text-center mt-4 mb-2 fw-bold">Category Barang</p>
+
+            <div class="row p-5 justify-content-center">
+                <div class="card card-color shadow mx-4" style="width: 20rem; height: 30rem;">
+                    <img src="/src/img/drone.jpg" class="card-img" alt="Technology">
+                    <div class="card-body">
+                        <p class="card-text text-center fs-4">Technology</p>
+                    </div>
+                </div>
+                <div class="card card-color shadow mx-4" style="width: 20rem; height: 30rem;">
+                    <img src="/src/img/office.jpg" class="card-img" alt="Office Supplies">
+                    <div class="card-body">
+                        <p class="card-text text-center fs-4">Office Supplies</p>
+                    </div>
+                </div>
+                <div class="card card-color shadow mx-4" style="width: 20rem; height: 30rem;">
+                    <img src="/src/img/furniture.jpg" class="card-img" alt="Furniture">
+                    <div class="card-body">
+                        <p class="card-text text-center fs-4">Furniture</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container">
+                <p class="fs-2 text-center mt-4 mb-2 fw-bold">Promo Barang</p>
+                <div class="row justify-content-center mb-4 pt-5">
+                    <div class="col-md-3 shadow text-bg-warning card mx-4">
+                        <img src="/src/img/binders.jpg" alt="Product 1" class="card-img">
+                        <h3>Binders</h3>
+                        <p>Rp 19.668,60</p>
+                        <p class="fix-price">Rp 31.500,00</p>
+                    </div>
+                    <div class="col-md-3 shadow text-bg-warning card mx-4">
+                        <img src="/src/img/tv.jpg" alt="Product 2" class="card-img">
+                        <h3>Machines</h3>
+                        <p>Rp 9.924.496,20</p>
+                        <p class="fix-price">Rp 14.886.000,00</p>
+                    </div>
+                    <div class="col-md-3 shadow text-bg-warning card mx-4">
+                        <img src="/src/img/tables.jpg" alt="Product 3" class="card-img">
+                        <h3>Tables</h3>
+                        <p>Rp 1.076.837,50</p>
+                        <p class="fix-price">Rp 1.385.000,00</p>
+                    </div>
+                </div>
+                <div class="row justify-content-center mb-4">
+                    <div class="col-md-3 shadow text-bg-warning card mx-4">
+                        <img src="/src/img/blender.jpg" alt="Product 1" class="card-img">
+                        <h3>Appliances</h3>
+                        <p>Rp 319.670,66</p>
+                        <p class="fix-price">Rp 359.625,00</p>
+                    </div>
+                    <div class="col-md-3 shadow text-bg-warning card mx-4">
+                        <img src="/src/img/labels.jpg" alt="Product 2" class="card-img">
+                        <h3>Labels</h3>
+                        <p>Rp 46.399,60</p>
+                        <p class="fix-price">Rp 52.000,00</p>
+                    </div>
+                    <div class="col-md-3 shadow text-bg-warning card mx-4">
+                        <img src="/src/img/kursi.jpg" alt="Product 3" class="card-img">
+                        <h3>Furnishings</h3>
+                        <p>Rp 107.196,00</p>
+                        <p class="fix-price">Rp 120.000,00</p>
+                    </div>
+                </div>
+            </div>
+
+            <p class="fs-2 text-center mt-4 mb-2 fw-bold">Jenis Barang</p>
+
+            <div class="row">
+                <div class="d-flex w-75 card-product">
+                    <div class="product-container">
+                        <img src="/src/img/phone.png" alt="Phone" class="img-fluid product-img">
+                        <p class="text-center fs-4 font-card">Phone</p>
+                    </div>
+                    <div class="product-container">
+                        <img src="/src/img/machine.png" alt="Machines" class="img-fluid product-img">
+                        <p class="text-center fs-4">Machines</p>
+                    </div>
+                    <div class="product-container">
+                        <img src="/src/img/coppiers.png" alt="Copiers" class="img-fluid product-img">
+                        <p class="text-center fs-4">Copiers</p>
+                    </div>
+                </div>
+                <div class="col-2 text-center">
+                    <p class="fs-1 fw-bold mt-10">Technology</p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-2 text-center">
+                    <p class="fs-1 fw-bold mt-10">Office Supplies</p>
+                </div>
+                <div class="d-flex w-75 card-product">
+                    <div class="product-container">
+                        <img src="/src/img/binder.png" alt="Phone" class="img-fluid product-img">
+                        <p class="text-center fs-4">Binders</p>
+                    </div>
+                    <div class="product-container">
+                        <img src="/src/img/paper.png" alt="Machines" class="img-fluid product-img">
+                        <p class="text-center fs-4">Paper</p>
+                    </div>
+                    <div class="product-container">
+                        <img src="/src/img/storage.png" alt="Copiers" class="img-fluid product-img">
+                        <p class="text-center fs-4">Storage</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mb-4">
+                <div class="d-flex card-product w-75">
+                    <div class="product-container">
+                        <img src="/src/img/meja.png" alt="Phone" class="img-fluid product-img">
+                        <p class="text-center fs-4">Tables</p>
+                    </div>
+                    <div class="product-container">
+                        <img src="/src/img/kursi.png" alt="Machines" class="img-fluid product-img">
+                        <p class="text-center fs-4">Chairs</p>
+                    </div>
+                    <div class="product-container">
+                        <img src="/src/img/lemari.png" alt="Copiers" class="img-fluid product-img">
+                        <p class="text-center fs-4">Bookcases</p>
+                    </div>
+                </div>
+                <div class="col-2 text-center">
+                    <p class="fs-1 fw-bold mt-10">Furniture</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION TEAM PROJECT -->
+        <section id="team">
+            <p class="fs-2 text-center mt-4 mb-2 fw-bold">Mentor</p>
+            
+            <div class="row p-5 justify-content-center">
+                <div class="card text-bg-warning shadow mx-4" style="width: 20rem; height: 30rem;">
+                    <img src="https://ca.slack-edge.com/T06GXA315TL-U06HBJ35RH9-fcf8c29e8a40-512" class="card-img" alt="Technology">
+                    <div class="card-body">
+                        <p class="card-text text-center fs-4">Almanik Balingga</p>
+                        <p class="card-text text-center fs-5">Mentor Data Analis</p>
+                    </div>
+                </div>
+                <div class="card text-bg-warning shadow mx-4" style="width: 20rem; height: 30rem;">
+                    <img src="https://ca.slack-edge.com/T06GXA315TL-U06T7GVM6BS-6b9ad713d31d-512" class="card-img" alt="Technology">
+                    <div class="card-body">
+                        <p class="card-text text-center fs-4">Fariz Rizky Rizaldy</p>
+                        <p class="card-text text-center fs-5">Mentor Software Engginer</p>
+                    </div>
+                </div>
+                <div class="card text-bg-warning shadow mx-4" style="width: 20rem; height: 30rem;">
+                    <img src="https://ca.slack-edge.com/T06GXA315TL-U06GGP6JTTR-d7208611bf14-512" class="card-img" alt="Technology">
+                    <div class="card-body">
+                        <p class="card-text text-center fs-4">Achiru Mujahidah</p>
+                        <p class="card-text text-center fs-5">Mentor Section</p>
+                    </div>
+                </div>
+            </div>
+            
+            <p class="fs-2 text-center mt-4 mb-2 fw-bold">Team Project</p>
+
+            <div class="row p-5 justify-content-center">
+                <div class="card text-bg-warning shadow mx-4" style="width: 20rem; height: 30rem;">
+                    <img src="/src/img/iqbal-profil.png" class="card-img" alt="Technology">
+                    <div class="card-body">
+                        <p class="card-text text-center fs-4">Iqbal Gymnastiar Purdadi</p>
+                        <p class="card-text text-center fs-5">Team Leader</p>
+                        <div style="justify-content: center; display: flex;">
+                            <a href="https://www.instagram.com/imparaboyy" target="_blank" class="text-dark"><i class="fab fa-instagram fa-2x text-dark mx-2"></i> </a>
+                            <a href="https://www.linkedin.com/adhimsatyanugraha" target="_blank" class="text-dark"><i class="fab fa-linkedin fa-2x text-dark mx-2"></i> </a>
+                            <a href="https://api.whatsapp.com/send?phone=082340619880" target="_blank" class="text-dark text-dark"><i class="fab fa-2x fa-whatsapp mx-2"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card text-bg-warning shadow mx-4" style="width: 20rem; height: 30rem;">
+                    <img src="/src/img/adhim-profil.jpeg" class="card-img" alt="Office Supplies">
+                    <div class="card-body">
+                        <p class="card-text text-center fs-4">Adhim Satya Nugraha</p>
+                        <p class="card-text text-center fs-5">Pitch Deck Team</p>
+                        <div style="justify-content: center; display: flex;">
+                            <a href="https://www.instagram.com/imparaboyy" target="_blank" class="text-dark"><i class="fab fa-instagram fa-2x text-dark mx-2"></i> </a>
+                            <a href="https://www.linkedin.com/adhimsatyanugraha" target="_blank" class="text-dark"><i class="fab fa-linkedin fa-2x text-dark mx-2"></i> </a>
+                            <a href="https://api.whatsapp.com/send?phone=082340619880" target="_blank" class="text-dark text-dark"><i class="fab fa-2x fa-whatsapp mx-2"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card text-bg-warning shadow mx-4" style="width: 20rem; height: 30rem;">
+                    <img src="/src/img/alda-profil.png" class="card-img" alt="Furniture">
+                    <div class="card-body">
+                        <p class="card-text text-center fs-4">A. Nurul Aisya Alda</p>
+                        <p class="card-text text-center fs-5">Pitch Deck Team</p>
+                        <div style="justify-content: center; display: flex;">
+                            <a href="https://www.instagram.com/imparaboyy" target="_blank" class="text-dark"><i class="fab fa-instagram fa-2x text-dark mx-2"></i> </a>
+                            <a href="https://www.linkedin.com/adhimsatyanugraha" target="_blank" class="text-dark"><i class="fab fa-linkedin fa-2x text-dark mx-2"></i> </a>
+                            <a href="https://api.whatsapp.com/send?phone=082340619880" target="_blank" class="text-dark text-dark"><i class="fab fa-2x fa-whatsapp mx-2"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row p-5 justify-content-center">
+                <div class="card text-bg-warning shadow mx-4" style="width: 20rem; height: 32rem;">
+                    <img src="/src/img/firman-profil2.jpg" class="card-img" alt="Technology">
+                    <div class="card-body">
+                        <p class="card-text text-center fs-4">Muhammad Nur Firmansyah</p>
+                        <p class="card-text text-center fs-5">Pitch Deck Team</p>
+                        <div style="justify-content: center; display: flex;">
+                            <a href="https://www.instagram.com/imparaboyy" target="_blank" class="text-dark"><i class="fab fa-instagram fa-2x text-dark mx-2"></i> </a>
+                            <a href="https://www.linkedin.com/adhimsatyanugraha" target="_blank" class="text-dark"><i class="fab fa-linkedin fa-2x text-dark mx-2"></i> </a>
+                            <a href="https://api.whatsapp.com/send?phone=082340619880" target="_blank" class="text-dark text-dark"><i class="fab fa-2x fa-whatsapp mx-2"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card text-bg-warning shadow mx-4" style="width: 20rem; height: 30rem;">
+                    <img src="/src/img/pras-profil.png" class="card-img" alt="Office Supplies">
+                    <div class="card-body">
+                        <p class="card-text text-center fs-4">Pras Tio Rifki Wijaya</p>
+                        <p class="card-text text-center fs-5">Frontend Engginer</p>
+                        <div style="justify-content: center; display: flex;">
+                            <a href="https://www.instagram.com/imparaboyy" target="_blank" class="text-dark"><i class="fab fa-instagram fa-2x text-dark mx-2"></i> </a>
+                            <a href="https://www.linkedin.com/adhimsatyanugraha" target="_blank" class="text-dark"><i class="fab fa-linkedin fa-2x text-dark mx-2"></i> </a>
+                            <a href="https://api.whatsapp.com/send?phone=082340619880" target="_blank" class="text-dark text-dark"><i class="fab fa-2x fa-whatsapp mx-2"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card text-bg-warning shadow mx-4" style="width: 20rem; height: 30rem;">
+                    <img src="/src/img/roi-profil.png" class="card-img" alt="Furniture">
+                    <div class="card-body">
+                        <p class="card-text text-center fs-4">Roidah Sahda</p>
+                        <p class="card-text text-center fs-5">Frontend Engineer</p>
+                        <div style="justify-content: center; display: flex;">
+                            <a href="https://www.instagram.com/imparaboyy" target="_blank" class="text-dark"><i class="fab fa-instagram fa-2x text-dark mx-2"></i> </a>
+                            <a href="https://www.linkedin.com/adhimsatyanugraha" target="_blank" class="text-dark"><i class="fab fa-linkedin fa-2x text-dark mx-2"></i> </a>
+                            <a href="https://api.whatsapp.com/send?phone=082340619880" target="_blank" class="text-dark text-dark"><i class="fab fa-2x fa-whatsapp mx-2"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row p-5 justify-content-center">
+                <div class="card text-bg-warning shadow mx-4" style="width: 20rem; height: 30rem;">
+                    <img src="/src/img/dwi-profil.png" class="card-img" alt="Technology">
+                    <div class="card-body">
+                        <p class="card-text text-center fs-4">⁠Dwi Nur Azizah Hamidah</p>
+                        <p class="card-text text-center fs-5">Frontend Engginer</p>
+                        <div style="justify-content: center; display: flex;">
+                            <a href="https://www.instagram.com/imparaboyy" target="_blank" class="text-dark"><i class="fab fa-instagram fa-2x text-dark mx-2"></i> </a>
+                            <a href="https://www.linkedin.com/adhimsatyanugraha" target="_blank" class="text-dark"><i class="fab fa-linkedin fa-2x text-dark mx-2"></i> </a>
+                            <a href="https://api.whatsapp.com/send?phone=082340619880" target="_blank" class="text-dark text-dark"><i class="fab fa-2x fa-whatsapp mx-2"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card text-bg-warning shadow mx-4" style="width: 20rem; height: 30rem;">
+                    <img src="/src/img/jinan-profil.png" class="card-img" alt="Office Supplies">
+                    <div class="card-body">
+                        <p class="card-text text-center fs-4">Jinan Rofifah Aprini</p>
+                        <p class="card-text text-center fs-5">Frontend Engginer</p>
+                        <div style="justify-content: center; display: flex;">
+                            <a href="https://www.instagram.com/imparaboyy" target="_blank" class="text-dark"><i class="fab fa-instagram fa-2x text-dark mx-2"></i> </a>
+                            <a href="https://www.linkedin.com/adhimsatyanugraha" target="_blank" class="text-dark"><i class="fab fa-linkedin fa-2x text-dark mx-2"></i> </a>
+                            <a href="https://api.whatsapp.com/send?phone=082340619880" target="_blank" class="text-dark text-dark"><i class="fab fa-2x fa-whatsapp mx-2"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card text-bg-warning shadow mx-4" style="width: 20rem; height: 30rem;">
+                    <img src="/src/img/nurul-profil.png" class="card-img" alt="Furniture">
+                    <div class="card-body">
+                        <p class="card-text text-center fs-4">⁠Nurul Ramadan</p>
+                        <p class="card-text text-center fs-5">Deployment Team</p>
+                        <div style="justify-content: center; display: flex;">
+                            <a href="https://www.instagram.com/imparaboyy" target="_blank" class="text-dark"><i class="fab fa-instagram fa-2x text-dark mx-2"></i> </a>
+                            <a href="https://www.linkedin.com/adhimsatyanugraha" target="_blank" class="text-dark"><i class="fab fa-linkedin fa-2x text-dark mx-2"></i> </a>
+                            <a href="https://api.whatsapp.com/send?phone=082340619880" target="_blank" class="text-dark text-dark"><i class="fab fa-2x fa-whatsapp mx-2"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+            <div class="row p-5 justify-content-center">
+                <div class="card text-bg-warning shadow mx-4" style="width: 20rem; height: 30rem;">
+                    <img src="/src/img/dewi-profil.png" class="card-img" alt="Technology">
+                    <div class="card-body">
+                        <p class="card-text text-center fs-4">Dewi Putriani</p>
+                        <p class="card-text text-center fs-5">Quality Assurance</p>
+                        <div style="justify-content: center; display: flex;">
+                            <a href="https://www.instagram.com/imparaboyy" target="_blank" class="text-dark"><i class="fab fa-instagram fa-2x text-dark mx-2"></i> </a>
+                            <a href="https://www.linkedin.com/adhimsatyanugraha" target="_blank" class="text-dark"><i class="fab fa-linkedin fa-2x text-dark mx-2"></i> </a>
+                            <a href="https://api.whatsapp.com/send?phone=082340619880" target="_blank" class="text-dark text-dark"><i class="fab fa-2x fa-whatsapp mx-2"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card text-bg-warning shadow mx-4" style="width: 20rem; height: 30rem;">
+                    <img src="/src/img/intan-profil.png" class="card-img" alt="Office Supplies">
+                    <div class="card-body">
+                        <p class="card-text text-center fs-4">Intan Ramadhani</p>
+                        <p class="card-text text-center fs-5">Quality Assurance</p>
+                        <div style="justify-content: center; display: flex;">
+                            <a href="https://www.instagram.com/imparaboyy" target="_blank" class="text-dark"><i class="fab fa-instagram fa-2x text-dark mx-2"></i> </a>
+                            <a href="https://www.linkedin.com/adhimsatyanugraha" target="_blank" class="text-dark"><i class="fab fa-linkedin fa-2x text-dark mx-2"></i> </a>
+                            <a href="https://api.whatsapp.com/send?phone=082340619880" target="_blank" class="text-dark text-dark"><i class="fab fa-2x fa-whatsapp mx-2"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card text-bg-warning shadow mx-4" style="width: 20rem; height: 32rem;">
+                    <img src="/src/img/wysda-profil2.jpg" class="card-img" alt="Furniture">
+                    <div class="card-body">
+                        <p class="card-text text-center fs-4">Wysda Sidang Adi Nugraha</p>
+                        <p class="card-text text-center fs-5">Quality Assurance</p>
+                        <div style="justify-content: center; display: flex;">
+                            <a href="https://www.instagram.com/imparaboyy" target="_blank" class="text-dark"><i class="fab fa-instagram fa-2x text-dark mx-2"></i> </a>
+                            <a href="https://www.linkedin.com/adhimsatyanugraha" target="_blank" class="text-dark"><i class="fab fa-linkedin fa-2x text-dark mx-2"></i> </a>
+                            <a href="https://api.whatsapp.com/send?phone=082340619880" target="_blank" class="text-dark text-dark"><i class="fab fa-2x fa-whatsapp mx-2"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+    <footer class="footer-grid pt-4 px-4 bg-warning shadow mb-2" style="border-radius: 10px;">
+        <div class="row">
+            <div style="display: flex;">
+                <div class="col-3" style="display: flex;">
+                    <img src="/src/img/logoPutih.png" alt="logo" style="width: 40%; height: 80%;"/>
+                    <h2 class="mt-4">South Store</h2>
+                </div>
+                <div class="col-5">
+                    <p>
+                        <i class="fa fa-users fa-1x mx-2 footer-icon" aria-hidden="true"></i> Team 15 - Section Balikpapan
+                    </p>
+                    <p>
+                        <i class="fa fa-book fa-1x mx-2 footer-icon" aria-hidden="true"></i> Revou
+                    </p>
+                    <p>
+                        <i class="fa fa-graduation-cap fa-1x mx-2 footer-icon" aria-hidden="true"></i> Studi Independen Batch 6
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="/src/script_login.js"></script>
+</body>
+
+</html>

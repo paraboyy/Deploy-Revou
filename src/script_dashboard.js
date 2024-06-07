@@ -282,23 +282,50 @@ class Dashboard {
         }
         // Create chart for total sales per month
         createSalesChartPerMonth() {
-        const yearSelector = document.getElementById('year-selector');
-        const year = yearSelector.value;
+        // const yearSelector = document.getElementById('year-selector');
+        // const year = yearSelector.value;
         const ctx = document.getElementById('chart-sales-per-month').getContext('2d');
-        // const year = "2014"; // Replace with dynamic year selection
-        const labels = this.dataSalesMonth[year].map(item => item.month);
-        const salesData = this.dataSalesMonth[year].map(item => item.total_sales);
-        new Chart(ctx, {
+        // const year = "2017";
+        const years = Object.keys(this.dataSalesMonth);
+        const labels = this.dataSalesMonth["2014"].map(item => item.month);
+        // const labels = this.dataSalesMonth[year].map(item => item.month);
+        // const salesData = this.dataSalesMonth[year].map(item => item.total_sales);
+        // new Chart(ctx, {
+        //     type: 'line',
+        //     data: {
+        //         labels: labels,
+        //         datasets: [{
+        //             label: `Sales in ${year}`,
+        //             data: salesData,
+        //             backgroundColor: 'rgba(75, 192, 192, 0.2)',
+        //             borderColor: 'rgba(75, 192, 192, 1)',
+        //             borderWidth: 1
+        //         }]
+        //     },
+        //     options: {
+        //         scales: {
+        //             y: {
+        //                 beginAtZero: true
+        //             }
+        //         }
+        //     }
+        // });
+
+        const datasets = years.map(year => {
+            return {
+                label: `Sales ${year}`,
+                data: this.dataSalesMonth[year].map(item => item.total_sales),
+                backgroundColor: getRandomColor(),
+                borderColor: getRandomColor(),
+                borderWidth: 1,
+                fill: false
+            };
+        });
+        const config = {
             type: 'line',
             data: {
                 labels: labels,
-                datasets: [{
-                    label: `Sales in ${year}`,
-                    data: salesData,
-                    backgroundColor: 'rgba(75, 192, 192, 0.2)',
-                    borderColor: 'rgba(75, 192, 192, 1)',
-                    borderWidth: 1
-                }]
+                datasets: datasets
             },
             options: {
                 scales: {
@@ -307,7 +334,17 @@ class Dashboard {
                     }
                 }
             }
-        });
+        };
+        new Chart(ctx, config);
+
+        function getRandomColor() {
+            const letters = '0123456789ABCDEF';
+            let color = '#';
+            for (let i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
     }
 }
 

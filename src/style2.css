@@ -1,16 +1,24 @@
 body {
+    cursor: url('/src/img/cursor/cur1054.cur'), auto;
     /* background-image: url('https://images.pexels.com/photos/1519088/pexels-photo-1519088.jpeg?cs=srgb&dl=pexels-souvenirpixels-1519088.jpg&fm=jpg'); */
     background-size: cover;
 }
 
 .container2 {
+    cursor: url('/src/img/cursor/cur1049.cur'), auto;
     display: inline-block;
     transition: transform 0.3s ease, background-color 0.3s ease, border 0.3s ease;
 }
 
 .container3 {
+    cursor: url('/src/img/cursor/cur1049.cur'), auto;
     display: inline-block;
     transition: transform 0.3s ease, background-color 0.3s ease, border 0.3s ease;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: black;
 }
 
 .container2:hover {
@@ -28,6 +36,75 @@ body {
     margin-top: 5rem;
     /* margin-left: 2rem; */
     /* margin-right: 2rem; */
+}
+
+.hover-image {
+    display: block;
+    height: auto;
+    filter: blur(10px);
+    transition: filter 0.3s ease-in-out;
+}
+
+.text-slider {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: 0;
+    transition: top 0.5s ease-in-out;
+    width: 100%;
+}
+
+.text-slider-container {
+    overflow: hidden;
+    height: 50px;
+    /* position: relative; */
+}
+
+.text-slide {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 50px;
+    color: #ffffff;
+}
+
+.font-width {
+    width: 50%;
+}
+.card {
+    /* width: 20rem; */
+    /* height: 30rem; */
+    transition: transform 0.3s ease-in-out, z-index 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: scale(1.3);
+    z-index: 10;
+    margin: auto;
+}
+
+.card-img {
+    width: 100%;
+    height: auto;
+}
+
+.image-text {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 30px;
+    color: rgb(255, 255, 255);
+    text-shadow: 2px 2px 4px rgb(0, 0, 0);
+}
+
+.text-bg-warning:hover .hover-image {
+    filter: blur(0);
+}
+
+.text-bg-warning:hover .image-text {
+    display: none;
 }
 
 .glass-effect {
@@ -111,12 +188,13 @@ body {
     align-items: center;
     justify-content: center;
     width: 100%;
+    height: 830px;
 
 }
 
 .card-img {
     object-fit: cover; 
-    height: 30rem; 
+    height: 23rem; 
     margin-top: 4%;
     margin-right: 2rem;
 }
@@ -270,6 +348,10 @@ body {
     width: 4rem;
 }
 
+.logo-mt {
+    margin-top: 400%;
+}
+
 .product-img {
     width: 100%;
     height: 300px; /* Atur tinggi yang diinginkan */
@@ -346,5 +428,13 @@ body {
 
     .nav-link {
         margin-top: 40%;
+    }
+
+    .logo-mt {
+        margin-top: 4%;
+    }
+
+    .logo {
+        width: 3rem;
     }
 }

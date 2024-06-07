@@ -1,3 +1,16 @@
+document.addEventListener('DOMContentLoaded', (event) => {
+    let currentIndex = 0;
+    const slides = document.querySelectorAll('.text-slide');
+    const totalSlides = slides.length;
+
+    function showNextSlide() {
+        currentIndex = (currentIndex + 1) % totalSlides;
+        document.querySelector('.text-slider').style.top = `-${currentIndex * 50}px`; // Adjust the height here too
+    }
+
+    setInterval(showNextSlide, 5000); // Change slide every 5 seconds
+});
+
 document.addEventListener('DOMContentLoaded', function() {
     const container = document.getElementById('container');
     const showRegisterForm = document.getElementById('showRegisterForm');
@@ -130,7 +143,7 @@ document.addEventListener('DOMContentLoaded', function() {
             //     title: "Succes",
             //     text: "Login berhasil",
             // });
-            window.location.href = 'page/dashboard.html';
+            window.location.href = 'dashboard.html';
         } else {
             Swal.fire({
                 icon: "error",
