@@ -170,6 +170,8 @@ class Dashboard {
         this.createSalesChartPerYear();
         this.createSalesChartByShipmode();
         this.createSalesChartPerMonth();
+        this.createSalesChartByCategory();
+        this.createSalesChartByRegion();
     }
 
     // Create chart for total sales per segment
@@ -240,6 +242,46 @@ class Dashboard {
                 }
             });
         }
+        createSalesChartByCategory() {
+            const ctx = document.getElementById('chart-sales-category').getContext('2d');
+            const data = {
+                labels: ['Technology', 'Office Supplies', 'Furniture'],
+                datasets: [{
+                    data: [38, 32.1, 29.9],
+                    backgroundColor: [
+                        'rgba(54, 162, 235, 0.5)',
+                        'rgba(255, 206, 86, 0.5)',
+                        'rgba(75, 192, 192, 0.5)'
+                    ],
+                    borderColor: [
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(255, 206, 86, 1)',
+                        'rgba(75, 192, 192, 1)'
+                    ],
+                    borderWidth: 1
+                }]
+            };
+            const config = {
+                type: 'pie',
+                data: data,
+                options: {
+                    responsive: true,
+                    plugins: {
+                        legend: {
+                            position: 'top',
+                        },
+                        tooltip: {
+                            callbacks: {
+                                label: function(tooltipItem) {
+                                    return `${tooltipItem.label}: ${tooltipItem.raw}%`;
+                                }
+                            }
+                        }
+                    }
+                },
+            };
+            new Chart(ctx, config);
+        }
         // Create chart for total sales by shipmode
         createSalesChartByShipmode(){
             const ctx = document.getElementById('chart-sales-shipmode').getContext('2d');
@@ -280,6 +322,41 @@ class Dashboard {
                 }
             });
         }
+        createSalesChartByRegion() {
+            const ctx = document.getElementById('chart-sales-region').getContext('2d');
+            const labels = ['West', 'South', 'East', 'Central']; // Define labels
+
+            new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: labels,
+                    datasets: [{
+                        label: 'Sales by Region', 
+                        data: [725.457, 391.721, 678.781, 501.239,],
+                        backgroundColor: [
+                            'rgba(255, 99, 132, 0.5)',
+                            'rgba(54, 162, 235, 0.5)',
+                            'rgba(153, 102, 255, 0.5)'
+                        ],
+                        borderColor: [
+                            'rgba(255, 99, 132, 1)',
+                            'rgba(54, 162, 235, 1)',
+                            'rgba(153, 102, 255, 1)'
+                        ],
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    scales: {
+                        yAxes: [{
+                            ticks: {
+                                beginAtZero: true
+                            }
+                        }]
+                    }
+                }
+            });
+        }
         // Create chart for total sales per month
         createSalesChartPerMonth() {
         // const yearSelector = document.getElementById('year-selector');
@@ -288,29 +365,6 @@ class Dashboard {
         // const year = "2017";
         const years = Object.keys(this.dataSalesMonth);
         const labels = this.dataSalesMonth["2014"].map(item => item.month);
-        // const labels = this.dataSalesMonth[year].map(item => item.month);
-        // const salesData = this.dataSalesMonth[year].map(item => item.total_sales);
-        // new Chart(ctx, {
-        //     type: 'line',
-        //     data: {
-        //         labels: labels,
-        //         datasets: [{
-        //             label: `Sales in ${year}`,
-        //             data: salesData,
-        //             backgroundColor: 'rgba(75, 192, 192, 0.2)',
-        //             borderColor: 'rgba(75, 192, 192, 1)',
-        //             borderWidth: 1
-        //         }]
-        //     },
-        //     options: {
-        //         scales: {
-        //             y: {
-        //                 beginAtZero: true
-        //             }
-        //         }
-        //     }
-        // });
-
         const datasets = years.map(year => {
             return {
                 label: `Sales ${year}`,
